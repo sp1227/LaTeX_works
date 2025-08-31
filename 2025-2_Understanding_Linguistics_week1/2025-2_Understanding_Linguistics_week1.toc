@@ -1,0 +1,2 @@
+\beamer@sectionintoc {1}{강의 계획}{2}{0}{1}
+\beamer@sectionintoc {2}{강의 주제 소개}{9}{0}{2}

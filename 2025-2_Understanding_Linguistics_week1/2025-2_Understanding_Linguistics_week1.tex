@@ -1,0 +1,242 @@
+\documentclass[11pt, aspectratio=169]{beamer}
+
+% --- Core Packages for Modern Documents ---
+\usepackage{fontspec}      
+\usepackage{unicode-math}
+\usepackage{xeCJK}         
+\usepackage{graphicx}      
+\usepackage{minted}
+\usepackage{setspace}
+\usepackage{tipa}
+
+\xeCJKsetup{CJKspace=true}
+
+% --- Font Setup ---
+\setsansfont{Noto Sans KR}
+\setmainfont{Noto Serif KR}
+\setmonofont{D2Coding}
+
+\setCJKsansfont{Noto Sans KR}  %나눔바른고딕 옛한글
+\setCJKmainfont{Noto Serif KR}
+\setCJKmonofont{D2Coding}
+
+\setmathfont{Latin Modern Math}
+
+\mode<presentation>
+{
+  \usetheme{default}      % or try Darmstadt, Madrid, Warsaw, Marburg...
+  \usecolortheme{dove} % or try albatross, beaver, crane, dove...
+  \usefonttheme{default}  % or try serif, structurebold, ...
+  \setbeamertemplate{navigation symbols}{}
+  \setbeamertemplate{caption}[numbered]
+} 
+
+\setbeamertemplate{sidebar canvas right}[vertical shading][top=gray,bottom=white] 
+
+\AtBeginSection[]{
+  \begin{frame}
+    \vfill % Vertically center the title
+    \centering
+    \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+      \usebeamerfont{title}\insertsectionhead\par
+    \end{beamercolorbox}
+    \vfill
+  \end{frame}
+}
+
+\renewcommand{\arraystretch}{1.3} % Set row height for ALL tables in the document to 1.5x
+
+\definecolor{Highlight}{HTML}{FFF2CC} % A soft yellow
+
+\definecolor{MonokaiBackground}{HTML}{272822}
+\definecolor{blockbody}{HTML}{EEEEEE}
+\setbeamercolor{block title}{bg=gray, fg=white}
+\setbeamercolor{block body}{bg=blockbody, fg=black}
+\setbeamertemplate{footline}{
+  \hfill % Pushes the content to the right
+  \usebeamercolor{page number in head/foot}
+  \usebeamerfont{page number in head/foot}
+  \insertframenumber{} / \inserttotalframenumber
+  \hspace*{2ex} % Adds a little padding from the right edge
+}
+
+\setminted{
+    style=default, % dracula, native, monokai...
+    % everyminted=\color{white},
+    linenos,       % Show line numbers
+    % bgcolor=MonokaiBackground,
+    frame=lines,   % Draw a thin frame around the code
+    framesep=2mm,
+    xleftmargin=6pt,
+    breaklines=true
+}
+
+\title[언어의 이해]{언어의 이해}
+\subtitle{강의소개}
+\author{김미경}
+% \institute{서울대학교}
+\date{2025.9.1}
+
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+% Uncomment these lines for an automatically generated outline.
+%\begin{frame}{Outline}
+%  \tableofcontents
+%\end{frame}
+
+\section{강의 계획}
+
+\begin{frame}[t]{}
+
+  \begin{block}{강사}
+    \begin{itemize}
+      \item 이름: 김미경
+      \item 연락처: \underline{saltpeanuts@snu.ac.kr}
+      \item 연구실: 인문대학 5동 308호 (월, 수)
+    \end{itemize}
+  \end{block}
+
+  \begin{block}{수업}
+    \begin{itemize}
+      \item 강의 언어: 한국어
+      \item 성적 부여 형태: A \textasciitilde F
+      \item 성적 부여 방식: 성적평점 환산기준표(4.3만점)에 따라 부여 \href{https://www.snu.ac.kr/academics/resources/certificate/grading}{\underline{서울대 학사행정}}
+        \begin{itemize}
+          \item 출석: 10점
+          \item 글쓰기 과제: 1(8점), 2(14점), 3(8점)
+          \item 중간고사: 30점
+          \item 기말고사: 30점
+        \end{itemize}
+    \end{itemize}    
+  \end{block}
+\end{frame}
+
+\begin{frame}[t]{}
+  \begin{block}{수업목표}
+    \setstretch{1.6}이 수업에서는 \textbf{인간 언어의 특성과 구조}에 대해 살펴보고 \textbf{언어학의 다양한 분야}를 소개한다. \underline{언어의 소리, 형태, 구조, 의미} 등을 과학적으로 분석함으로써 자신이 사용하는 언어를 메타적으로 바라보는 시각을 키운다. 언어 \underline{변화}와 \underline{변이}의 양상 및 언어의 \underline{여러 유형}을 살피고, 언어가 \underline{문자}로 기록되는 방식을 살펴 언어의 역동성과 다양성을 접하도록 한다.
+  \end{block}
+  \begin{block}{추가로...}
+    \begin{itemize}
+      \item 연구 대상으로서의 언어 개관
+      \item 사람이 언어를 처리하는 방식
+      \item 서로 다른 언어가 접촉하는 양상
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}[t]{}
+  \begin{block}{교재}
+    Language files : materials for an introduction to language and linguistics
+    \begin{itemize}
+      \item \href{https://ohiostatepress.org/books/titles/9780814258354.html}{\underline{출판사 공식 페이지}}
+      \item \href{https://snu-primo.hosted.exlibrisgroup.com/permalink/f/1l6eo7m/82SNU_INST21929717540002591}{\underline{중앙도서관 페이지}} (참고자료실\_강의도서)
+    \end{itemize}
+  \end{block}      
+  \includegraphics[height=0.6\textwidth]{img/9780814258354.jpg}
+\end{frame}
+
+\begin{frame}[t]{}
+  \begin{block}{주차별 수업 내용: eTL 모듈 참조}
+    \begin{itemize}
+      \item 월: 지난 주제 강의에 대한 퀴즈 및 해설
+      \item 수: 새 주제 강의
+    \end{itemize}     
+  \end{block}
+
+  \begin{block}{공휴일 정책: 수업 없음. 자율학습일.}
+    \begin{itemize}
+      \item 추석(10월 6일, 10월 8일)
+      \item 개교기념일(10월 15일)
+    \end{itemize}      
+  \end{block}
+  \begin{block}{출석 (전자출결)}
+    결석 사유가 생기면 mySNU “출석인정신청” 메뉴 이용
+    \begin{itemize}
+      \item mySNU - 학사행정 - 수업/성적 - 수업 - 출석인정신청
+    \end{itemize}
+  \end{block}
+
+\end{frame}
+
+\begin{frame}[t]{}
+    \begin{block}{시험 일정}
+      \begin{itemize}
+        \item 중간고사: 10월 20일
+        \item 기말고사: 12월 10일
+      \end{itemize}       
+    \end{block}
+
+  \begin{block}{중간/기말고사 평가 기준 (문제당 3점 만점)}
+    \begin{itemize}
+      \item 내용의 정확성 (필수 정보 모두 포함, 오류 없음): 2.5점
+      \item 이해의 탁월성 (개념과 용어를 깊이 있게 설명): 가산점 +0.5점
+      \item 정보 누락 또는 내용 오류: 항목당 -0.5점
+    \end{itemize}
+  \end{block}
+
+\end{frame}
+
+\begin{frame}[t]{}
+
+    \begin{block}{글쓰기 과제 일정}
+        \begin{itemize}
+          \item 과제 1: 9월 8일 \textasciitilde 9월 29일
+          \item 과제 2: 10월 13일 \textasciitilde 11월 3일
+          \item 과제 3: 11월 24일 \textasciitilde 12월 8일
+        \end{itemize}      
+    \end{block}  
+
+  \begin{block}{과제 평가 기준 (항목당 1점씩 감점)}
+    \begin{itemize}
+      \item 글의 완성도 (독립적인 한 편의 글로 구성)
+      \item 개념 및 용어 사용의 적절성
+      \item 내용의 명료성 (비전공자도 이해 가능한 수준)
+      \item 형식 및 분량 준수
+    \end{itemize}
+  \end{block}
+
+\end{frame}
+
+\section{강의 주제 소개}
+
+\begin{frame}[t]{}
+  \begin{block}{이 발음과 저 발음은 왜 다르게 들리지?}
+    \href{https://youtube.com/watch?v=dVKh6fSxbkE}{\underline{‘매일두유 X 에드워드리 건강한 만남’ 광고}}
+    \begin{itemize}
+      \item 광고 첫부분의 ‘The 매일 두유 is clean...’의 ‘매일 두유’와, 본인이 발음하는 ‘매일 두유’를 비교해 보세요.
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}[t]{}
+  \begin{block}{단어를 왜 이렇게 쪼개지?}
+    \begin{center}
+      \setstretch{1.6}pneumonoconiosis\\
+      pneumonoultramicroscopicsilicovolcanoconiosis\\
+      \textipa{("nju:m@nou""2ltr@""maikr@""skApIk"sIlI""kouvAl""keinou""kouni"ousIs)}\\
+      {\small pneu‧mo‧no‧ul‧tra‧mi‧cro‧sco‧pic‧si‧li‧co‧vol‧ca‧no‧co‧ni‧o‧sis}\\
+      pneumono-ultramicroscopic-silico-volcano-coniosis\\
+      pneumon-o-, ultra-micro-scop-ic, silico-, volcano, coni-osis\\
+      {\small 주로 화산에서 발견되는 아주 미세한 규소 먼지를 흡입하여 허파에 쌓여 생기는 만성 폐질환}      
+    \end{center}
+  \end{block}  
+\end{frame}
+
+\begin{frame}[t]{}
+  \begin{block}{문장 늘리기 게임, 어디까지?}
+    \begin{center}
+      \setstretch{1.6}태희가 \,\,\,\, 늦었다 \\
+      태희가 수업에 늦었다 \\
+      태희가 어제 버스를 놓쳐서 수업에 늦었다 \\
+      태희가 어제 늦잠을 자서 버스를 놓쳐서 수업에 늦었다 \\
+      ...
+    \end{center}
+  \end{block}
+\end{frame}
+
+\end{document}

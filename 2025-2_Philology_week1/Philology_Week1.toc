@@ -1,0 +1,15 @@
+\beamer@sectionintoc {1}{문헌 사용 연구}{2}{0}{1}
+\beamer@sectionintoc {2}{문헌 관련 분야들}{5}{0}{2}
+\beamer@subsectionintoc {2}{1}{문헌 연구 분야}{6}{0}{2}
+\beamer@subsectionintoc {2}{2}{문헌학 \& 역사언어학}{8}{0}{2}
+\beamer@subsectionintoc {2}{3}{서지학 \& 역사언어학}{9}{0}{2}
+\beamer@subsectionintoc {2}{4}{종합}{10}{0}{2}
+\beamer@subsectionintoc {2}{5}{관련 분야}{11}{0}{2}
+\beamer@sectionintoc {3}{문헌의 확장과 관련분야 확대}{12}{0}{3}
+\beamer@subsectionintoc {3}{1}{‘문헌’ 개념의 확장}{13}{0}{3}
+\beamer@subsectionintoc {3}{2}{확장된 관련 분야들}{17}{0}{3}
+\beamer@sectionintoc {4}{문헌학연습}{22}{0}{4}
+\beamer@subsectionintoc {4}{1}{일반적인 목표}{23}{0}{4}
+\beamer@subsectionintoc {4}{2}{2025-2 목표}{24}{0}{4}
+\beamer@sectionintoc {5}{수업 계획}{27}{0}{5}
+\beamer@sectionintoc {6}{실습}{35}{0}{6}

@@ -1,0 +1,618 @@
+\documentclass[twoside,openright]{report}
+\usepackage[hangul]{kotex}
+\usepackage[parenthesis,hang]{dhucsfn}
+\usepackage{tikz-cd}
+\usepackage{adjustbox}
+% \usepackage[backend=biber,style=apa,doi=false,isbn=false,url=false,natbib=true,citestyle=authoryear,bibstyle=authoryear]{biblatex}
+
+% \addbibresource{phd.bib}
+% \DefineBibliographyStrings{english}{andothers={외}} %글로벌하게 다 바꿔버리는 문제가 있다. 영어 문헌 3인 이상은 어쩌지
+
+% \renewbibmacro*{textcite}{%
+%     \ifnameundef{labelname}
+%         {\iffieldundef{shorthand}
+%         {\usebibmacro{cite:label}%
+%             \setunit{%
+%             \global\booltrue{cbx:parens}%
+%             \printdelim{nonameyeardelim}\bibopenparen}%
+%             \ifnumequal{\value{citecount}}{1}
+%             {\usebibmacro{prenote}}
+%             {}%
+%             \usebibmacro{cite:labeldate+extradate}}
+%         {\usebibmacro{cite:shorthand}}}
+%         {\printnames{labelname}%
+%         \setunit{%
+%         \global\booltrue{cbx:parens}%
+%         \bibopenparen}%
+%         \ifnumequal{\value{citecount}}{1}
+%         {\usebibmacro{prenote}}
+%         {}%
+%         \usebibmacro{citeyear}}}%
+
+% \AtEveryCitekey{%
+%   \renewcommand{\nameyeardelim}{ }%
+%   \renewcommand{\postnotedelim}{:}%
+%   \DeclareFieldFormat{postnote}{#1}%
+%   \ifkeyword{kobib}{%
+%     \renewcommand{\multinamedelim}{·}%
+%     \renewcommand{\finalnamedelim}{·}%
+%     }{%
+%   }%
+% }
+% \AtEveryBibitem{%
+%   \ifkeyword{kobib}{%
+%     \renewcommand{\multinamedelim}{·}%
+%     \renewcommand{\finalnamedelim}{·}%
+%     \renewbibmacro{in:}{}
+%     \DeclareFieldFormat{journaltitle}{ 《#1》}%
+%     \DeclareFieldFormat{booktitle}{ 《#1》}%
+%     \DeclareFieldFormat{pages}{#1}%
+%     }{%
+%   }%
+% }
+
+\usepackage{geometry}
+\usepackage{lineno}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{titlesec}
+% \usepackage{hanging}
+\usepackage[utf8]{inputenc}
+\usepackage{indentfirst}
+\usepackage{array,longtable}
+\usepackage{lipsum}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{tipa}
+% \usepackage{pdfpages}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+\usepackage{stmaryrd}
+% \usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage{gb4e}   %gb4e must be at the end of the usepackage commands
+\counterwithin{exx}{chapter}
+\makeatletter
+\def\@@xsii{\let\@xsii\jaso}
+\makeatother
+\geometry{
+    % 심사 후 인쇄 넘기기 전에 A4 크기로 용지 크기와 여백을 조정할 것
+    paperheight=297mm, % dissertation 190 * 260, A4 210 * 297, diff 20 * 37 (17 + 19)
+    paperwidth=210mm,
+    inner=30mm,         % Inner margin A4 38mm
+    outer=30mm,         % Outer margin A4 38mm
+    bindingoffset=4mm, % Binding offset
+    top=28mm,           % Top margin A4 60mm
+    bottom=28mm,        % Bottom margin A4 60mm
+    % showframe,         % show how the type block is set on the page
+}
+\defaultfontfeatures{Mapping=tex-text,Ligatures=TeX}
+\setmainfont[Ligatures=TeX]{Times New Roman} 
+\setmainhangulfont[Script=Hangul]{Source Han Serif K}
+\setsanshangulfont[Script=Hangul]{Source Han Sans K}
+\linespread{1.7}
+% \setlength{\footnotesep}{1.3em}
+% \setlength{\parindent}{1em}
+% \setlength{\parskip}{0em}
+% \setcounter{secnumdepth}{3}
+% \setcounter{tocdepth}{3}
+% \setlist[itemize]{noitemsep}
+% \setlist[enumerate]{noitemsep}
+% \setlist[description]{noitemsep}
+% \titleformat{\chapter}[hang]{\normalfont\LARGE}{제\thechapter 장}{10pt}{}[]
+% \titlespacing{\chapter}{0pt}{-50pt}{30pt}
+% \titleformat{\section}[hang]{\normalfont\large}{\thesection}{10pt}{}[]
+% \titleformat{\subsection}[hang]{\normalfont}{\thesubsection}{10pt}{}[]
+% \titleformat{\subsubsection}[hang]{\normalfont}{\thesubsubsection}{10pt}{}[]
+% \titleformat{\paragraph}[hang]{\normalfont}{\theparagraph}{10pt}{}
+\newcommand{\sa}[1]{〈#1〉}
+\newcommand{\da}[1]{{\small{《#1》}}}
+\newcommand{\sq}[1]{‘#1'}
+\newcommand{\dq}[1]{“#1"}
+% \newcommand{\tita}[1]{\underline{#1}}
+% \newcommand{\num}[1]{\textsuperscript{#1}}
+% \newcommand{\marginalnote}[1]{{\small{(#1)}}}
+
+\begin{document}
+
+
+% --- Title Information ---
+\title{2025-2 문헌학연습 분석 논문 목록}
+\author{김미경}
+\date{\today}
+
+% \maketitle % Prints the title
+
+
+\begin{center}
+    {\Large\bfseries 2025-2 문헌학연습 분석 논문 목록\par} % Title
+    \vspace{1.5em} % Space after title
+    {\large 김미경\par} % Author
+    \vspace{0.5em} % Space after author
+    {\normalsize \today\par} % Date
+\end{center}
+\vspace{2em} % Space between title block and the main content
+
+\section*{안내}
+\begin{itemize}
+  \item 2-5주, 7주 총 5주간 하루에 패키지 2개씩 다룸
+  \item 패키지 1개당 발표자 1인
+  \item 자신이 고른 패키지 안에서 교체하고 싶은 논문이 있으면 상의 후 교체 가능
+  \item 발표 순서는 패키지 번호와 무관함
+\end{itemize}
+\section*{분석 대상}
+
+\begin{itemize}
+  \item 할 일
+    \begin{itemize}
+      \item 논문에서 수행한 연구의 연구질문은 무엇인가
+      \item 이 연구질문에 답하기 위해 어떤 데이터를 선정하였는가
+      \item (데이터를 직접 만들었다면 어떤 점에 주의하여 만들었는가)
+      \item 데이터에서 어떤 표현을 어떤 방법으로 추출하였는가
+      \item 이 연구의 발견을 재현하려 한다면 나는 어떤 데이터를 어떻게 사용하겠는가
+    \end{itemize}
+  \item 하지 않을 일
+    \begin{itemize}
+      \item 논문의 주장은 무엇인가
+      \item 논문의 이론적 쟁점은 무엇인가
+      \item 논문의 논리 구조는 어떻게 되어 있는가
+      \item 논문의 근거는 합당한가
+    \end{itemize}
+\end{itemize}
+
+\section*{패키지 1: 비규범적 언어 사용 양상 분석}
+\begin{enumerate}[label=\textbf{\arabic*.}] % Makes the number bold with a period
+  
+  \item \textbf{이래호 (2012).} 선어말 어미 \sq{-시-}의 청자 존대 기능에 대한 고찰, \da{언어학 연구}, 23, 147-166. \href{https://doi.org/10.17002/sil..23.201204.147}{https://doi.org/10.17002/sil..23.201204.147}
+
+        \begin{description}[font=\normalfont\bfseries, style=unboxed]
+          \item[연구질문] 청자 존대법 \sq{-시-}는 표준적인 주체 존대법 '-시-'와 어떻게 다르며, 이 형태는 어떤 의미적, 화용론적 기능을 수행하는가?
+            \begin{itemize}
+              \item 청자 존대법 \sq{-시-}가 문장의 서술어와 결합하기 위해 충족되어야 하는 의미적 조건은 무엇인가?
+              \item 화자가 청자 존대법 \sq{-시-}를 반복적으로 사용하는 것은 어떤 목적을 달성하기 위한 행위인가?
+            \end{itemize}
+          \item[데이터 요약] 일화적 증거(Anecdotal Evidence)
+        \end{description}
+
+  \item \textbf{이정복 (2022).} 누리꾼들의 상황 주체 높임 \sq{-시-} 사용 연구, \da{방언학}, 35, 107-144. \href{https://kiss-kstudy-com-ssl.libproxy.snu.ac.kr/Detail/Ar?key=3957996}{\u{KISS 링크}}
+
+  \begin{description}[font=\normalfont\bfseries, style=unboxed]
+    \item[연구질문] 한 외제 자동차 동호회 온라인 카페에서, 누리꾼들은 상황 주체 높임 \sq{-시-}를 어떻게 사용하고 있으며, 이러한 사용 양상은 한국어 경어법의 변화와 확산에 대해 무엇을 보여주는가?
+      \begin{itemize}
+        \item 이 카페에서 상황 주체 높임 \sq{-시-}는 어떤 서술어 유형과 함께, 누구를 대상으로 사용되는가?
+        \item 누리꾼들이 상황 주체 높임 \sq{-시-}를 사용하는 사회적 동기는 무엇이며, 이 표현은 커뮤니티 내에서 어떤 기능을 수행하는가?
+        \item 이러한 \sq{-시-}의 사용은 커뮤니티 구성원들 사이에서 얼마나 널리, 그리고 자연스럽게 받아들여지고 있는가?
+      \end{itemize}
+    \item[데이터 요약] 2021년 1월 \textasciitilde 3월간 사용된 외제 자동차 동호회 인터넷 카페의 게시글
+  \end{description}
+
+  \item \textbf{김은혜 (2016).} 한국어 선어말 어미 \sq{-시-}의 사물 존대 기능 : 백화점, 대형마트, 재래시장 판매원의 발화를 중심으로, \da{사회언어학}, 24(1), 91-113. \href{http://dx.doi.org/10.14353/sjk.2016.24.1.04}{http://dx.doi.org/10.14353/sjk.2016.24.1.04}
+
+  \begin{description}[font=\normalfont\bfseries, style=unboxed]
+    \item[연구질문] 기존 주체 높임법과 달리, 사물에까지 사용되는 선어말어미 ‘-시-’의 새로운 기능은 무엇이며, 이러한 언어 변이는 사회 계층과 어떤 관련이 있는가?
+      \begin{itemize}
+        \item 고급 서비스 산업(백화점)과 일반 상업 공간(재래시장)에서, ‘-시-’의 사물 존대 용법은 어떻게 다르게 나타나는가?
+        \item 이러한 ‘-시-’의 새로운 용법에 대한 한국어 화자들의 인식은 어떠한가?
+        \item 이러한 실제 언어 사용의 변화를 한국어 교육에서 어떻게 다루어야 하는가?
+      \end{itemize}
+    \item[데이터 요약] 백화점/대형마트/재래시장 점원과 연구자의 대화, 설문조사
+  \end{description}
+
+\end{enumerate}
+
+\section*{패키지 2: 새로 나타난 언어 사용 양상 분석}
+
+\begin{enumerate}[label=\textbf{\arabic*.}] % Makes the number bold with a period
+
+  % --- Add New Papers Here ---
+  \item \textbf{이정민 (2023).} \sq{줄 모르다/알다} 구문 분석 - 카카오톡 메신저 말뭉치를 중심으로 -, \da{우리말글}, 98, 85-123. \href{https://doi.org/10.18628/urimal.98..202309.85}{https://doi.org/10.18628/urimal.98..202309.85}
+  
+        \begin{description}[font=\normalfont\bfseries, style=unboxed]
+          \item[연구질문] 카카오톡 메신저 말뭉치에서 나타나는 \sq{줄 모르다/알다} 구문의 통사·의미적 사용 양상은 어떠하며, 이 구문에서 서술어 생략 현상은 어떤 조건에서, 어떤 화용론적 기능을 위해 발생하는가?
+            \begin{itemize}
+              \item \sq{줄 모르다/알다} 구문은 \sq{방법/능력}과 \sq{사실 인식}이라는 두 가지 의미 중 어떤 의미로 더 자주 사용되는가?
+              \item 두 의미 용법은 어떤 형태·통사적 제약의 차이를 보이는가?
+              \item 각 구문이 가장 자주 실현되는 의미 유형과 결합하는 문법 형태는 무엇인가?
+              \item \sq{모르다}와 \sq{알다}의 생략에 영향을 미치는 요소는 무엇인가?
+              \item 서술어가 생략된 형태(\sq{줄은}, \sq{줄이야} 등)는 원래 구문의 의미를 유지하면서 어떤 추가적인 기능을 수행하는가?
+            \end{itemize}
+          \item[데이터 요약] 국립국어원 어휘 의미 분석 말뭉치 2020(버전 2.0), 국립국어원 메신저 말뭉치(버전 2.0)
+        \end{description}
+
+  \item \textbf{윤재연 (2020).} \sa{때문에}의 비문법적 사용에 대한 연구, \da{사회언어학}, 28(3), 245-277. \href{https://scholar-kyobobook-co-kr-ssl.libproxy.snu.ac.kr/article/detail/4010027923589}{교보 스콜라 링크}
+  
+        \begin{description}[font=\normalfont\bfseries, style=unboxed]
+          \item[연구질문] \sq{그래서}와 같이 접속사처럼 사용되는 \sq{때문에}의 비문법적 용법은, 선행 연구의 주장처럼 탈문법화(degrammaticalization) 현상으로 보아야 하는가, 아니면 교정해야 할 단순한 문법적 오류로 보아야 하는가?
+            \begin{itemize}
+              \item 접속사적 \sq{때문에}는 어떤 언어 환경에서 나타나는가?
+              \item 이 현상은 특정 문법적 변화로 인정될 만큼 충분히 빈번하게 나타나는가?
+              \item 만약 이 현상이 의존명사 '때문'의 자립성 때문이라면, 이 자립성은 '때문'이 사용되는 다른 문법 구조에서도 일관되게 나타나는가?
+            \end{itemize}
+          \item[데이터 요약] 고려대학교 민족문화연구원 SJ-RIKS, SJ-RIKS ext (주로 1990년대 자료로 추정) / 고려대학교 민족문화연구원 Trends21 코퍼스(주로 2000~2013년 자료) / 국립국어원 말뭉치 
+            \begin{itemize}
+              \item 발표자 주의: 이 연구에서 사용한 국립국어원 말뭉치가 구체적으로 무슨 자료일지 추정할 것
+            \end{itemize}
+        \end{description}
+
+  \item \textbf{하영우, 신지영 (2012).} 자유 발화 자료에 나타난 \sq{-어가지고}의 문법 범주와 의미 기능, \da{한국어학}, 55, 397-430. \href{https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE06568902}{DBPIA 링크}
+  
+        \begin{description}[font=\normalfont\bfseries, style=unboxed]
+          \item[연구질문] 구어에서 나타나는 연결어미 \sq{-어가지고}의 문법적 지위와 의미 기능은 무엇이며, 이는 \sq{-어서}와 어떻게 다른가?
+            \begin{itemize}
+              \item 연결어미 \sq{-어가지고}는 문법화 과정을 통해 완전한 어미의 지위를 획득했는가? 만약 그렇지 않다면, 어떤 제약을 보이는가?
+              \item 연결어미 \sq{-어가지고}는 어떤 의미 기능들로 사용되는가?
+              \item 의미 기능의 사용 빈도 분포 측면에서, \sq{-어가지고}는 \sq{-어서}와 어떤 차이점을 보이는가?
+            \end{itemize}
+          \item[데이터 요약] 고려대학교 음성언어정보연구실 자유발화 자료(23시간 3분 35초, 172,084 어절)
+        \end{description}
+
+\end{enumerate}
+
+\section*{패키지 3: 연관 단어 분석}
+
+\begin{enumerate}[label=\textbf{\arabic*.}] % Makes the number bold with a period
+
+  % --- Add New Papers Here ---
+  \item \textbf{김해연 (2019).} 반의어 \sq{묶다}와 \sq{풀다}의 의미와 용법에 대한 코퍼스언어학적 분석, \da{담화와 인지}, 26(3), \href{https://doi.org/10.15718/discog.2019.26.3.43}{https://doi.org/10.15718/discog.2019.26.3.43}
+  
+        \begin{description}[font=\normalfont\bfseries, style=unboxed]
+          \item[연구질문] 한국어 반의어 \sq{묶다}와 \sq{풀다}의 실제 사용 양상은 어떻게 다르며, 이를 통해 두 어휘의 반의 관계가 왜 비대칭적이라고 할 수 있는가?
+            \begin{itemize}
+              \item 두 어휘가 함께 사용되는 명사의 유형은 어떻게 다르며, 이 차이는 \sq{풀다}의 의미가 더 다양하게 확장되었음을 어떻게 보여주는가?
+              \item 개념 은유 이론의 관점에서 볼 때, 두 어휘의 비유적 의미는 어떤 은유적 사고를 통해 파생되는가?
+              \item 두 어휘의 사용 빈도, 공기 관계, 연어 패턴의 비대칭성은 이 둘의 관계가 완전한 반의 관계가 아닌 부분적 반의 관계(partial antonymy)임을 어떻게 증명하는가?
+            \end{itemize}
+          \item[데이터 요약] 세종코퍼스 > 현대문어 > 책 > 상상적텍스트-일반
+            \begin{itemize}
+              \item 발표자 주의: 이 연구에서 사용한 세종코퍼스가 구체적으로 무슨 자료일지 추정할 것
+            \end{itemize}
+        \end{description}
+
+  \item \textbf{신중진 (2018).} [다름]의 \sq{틀리다}를 형성하는 유의-반의 관계망 분석, \da{한국어학}, 78, 31-54. \href{https://doi.org/10.20405/kl.2018.02.78.31}{https://doi.org/10.20405/kl.2018.02.78.31}
+  
+        \begin{description}[font=\normalfont\bfseries, style=unboxed]
+          \item[연구질문] \sq{틀리다}가 [다름]의 의미를 획득하게 된 과정은 무엇이며, 이 의미 확대 과정에서 유의 관계와 반의 관계에 기반한 유추는 각각 어떤 역할을 하는가?
+            \begin{itemize}
+              \item \sq{틀리다↔맞다}라는 기존의 반의 관계는 이 의미 변화의 출발점으로서 어떻게 기능하는가?
+              \item \sq{맞다=같다}라는 유의 관계는 \sq{틀리다}와 \sq{다르다}를 연결하는 의미망 속에서 어떤 다리 역할을 하는가?
+              \item \sq{같다/맞다↔다르다}라는 반의 관계를 기반으로 한 반의어적 유추가, 최종적으로 \sq{틀리다=다르다}라는 새로운 관계를 형성하는 과정은 구체적으로 어떠한가?
+            \end{itemize}
+          \item[데이터 요약] 21세기 세종말뭉치
+            \begin{itemize}
+              \item 발표자 주의: 이 연구에서 사용한 21세기 세종말뭉치가 구체적으로 무슨 자료일지 추정할 것. 단서는 ‘어의별 용례’와 검색 개수 ‘800여 개’
+            \end{itemize}
+        \end{description}
+        
+  \item \textbf{최지희 (2020).} 한국어 학술 정형 표현 연구: 빈도와 핵심도를 중심으로, \da{언어와 정보 사회}, 40, 113-147, \href{https://doi.org/10.29211/soli.2020.40..005}{https://doi.org/10.29211/soli.2020.40..005}
+  
+        \begin{description}[font=\normalfont\bfseries, style=unboxed]
+          \item[연구질문] 한국어 학술 논문에서 통계적으로 유의미하게 자주 사용되는 핵심적인 관용적 표현(academic formulaic expressions)은 무엇이며, 그 사용 양상은 학문 분야별로 어떻게 다른가?
+            \begin{itemize}
+              \item 대규모 한국어 학술 논문 말뭉치에서, 형태소 기반 N-gram 분석을 통해 추출할 수 있는 유의미한 학술적 관용 표현은 무엇인가?
+              \item 추출된 표현들 중, 빈도와 통계적 유의성을 기준으로 어떤 것들이 핵심 학술 관용 표현으로 분류될 수 있는가?
+              \item 이러한 핵심 학술 관용 표현들은 인문학, 사회과학, 예술, 자연과학, 공학 등 5개 학문 분야에서 공통적으로 나타나는가, 아니면 분야별로 특화된 사용 양상을 보이는가?
+            \end{itemize}
+          \item[데이터 요약] 학술지 논문을 수집하여 만든 ‘학술지 말뭉치’
+        \end{description}
+        
+\end{enumerate}
+
+\section*{패키지 4: 품사 기반 결합 양상 분석}
+
+\begin{enumerate}[label=\textbf{\arabic*.}] % Makes the number bold with a period
+
+  % --- Add New Papers Here ---
+  \item \textbf{정성훈 (2024).} 한국어 용언의 다층 네트워크 분석 - 한국어 부사와 용언을 중심으로 -, \da{한국어학}, 105, 121-153, \href{http://dx.doi.org/10.20405/kl.2024.11.105.121}{http://dx.doi.org/10.20405/kl.2024.11.105.121}
+  
+        \begin{description}[font=\normalfont\bfseries, style=unboxed]
+          \item[연구질문] '어휘의미분석 말뭉치'에 나타난 부사와 용언의 수식 관계를 바탕으로, 한국어 용언 네트워크를 어떻게 구축하고 분석할 수 있으며, 이 네트워크는 구어/문어, 동사/형용사와 같은 여러 언어 층위에서 한국어 용언 체계의 구조적 특징을 어떻게 보여주는가?
+            \begin{itemize}
+              \item 말뭉치에서 부사와 용언 사이의 유의미한 수식 관계는 무엇이며, 이를 어떻게 추출할 수 있는가?
+              \item 추출된 관계를 바탕으로 부사와 용언의 2원 네트워크(bipartite network)를 어떻게 구축할 수 있는가?
+              \item 이 네트워크와 네트워크 투사(network projection)를 통해 드러나는 한국어 용언 간의 관계는 무엇이며, 이는 용언의 의미적 속성을 어떻게 설명하는가?
+              \item 구어와 문어, 동사와 형용사 등 다층 네트워크 모델링을 적용했을 때, 한국어 용언의 사용 양상과 그 특징은 어떻게 다르게 나타나는가?
+                \begin{itemize}
+                  \item 발표자 주의: 이 연구에서 \sq{2원 네트워크}로 어떤 언어 현상을 설명하고 있는지 쉽게 설명할 것
+                  \item 발표자 주의: 이 연구에서 \sq{네트워크 투사(network projection)}로 어떤 언어 현상을 설명하고 있는지 쉽게 설명할 것
+                \end{itemize}
+            \end{itemize}
+          \item[데이터 요약] 국립국어원 어휘 의미 분석 말뭉치(버전 2.0)
+        \end{description}
+
+  \item \textbf{최운호 (2015).} 한국어 \sq{용언 어간 + 어미} 결합의 양상 —용언별 결합 어미 분포의 집중화 경향에 대하여—, \da{언어학}, 71, 17-47, \href{http://dx.doi.org/10.17290/jlsk.2015..71.17}{http://dx.doi.org/10.17290/jlsk.2015..71.17}
+  
+        \begin{description}[font=\normalfont\bfseries, style=unboxed]
+          \item[연구질문] 한국어 용언들은 활용 형태의 다양성 측면에서 어떻게 다르며, 이 다양성을 어떻게 계량적으로 측정하고 설명할 수 있는가?
+            \begin{itemize}
+              \item 각 용언이 보이는 활용형의 다양성을 어떻게 객관적인 수치로 측정하여 척도화할 수 있는가?
+              \item 측정된 다양성 척도를 어떻게 시각화하여, '모자란 움직씨'부터 기능 동사 '하다'에 이르기까지 용언들이 보이는 다양한 스펙트럼을 효과적으로 제시할 수 있는가?
+              \item 다양성의 다른 측면인 '집중화' 관점에서, 각 용언은 특정 활용형에 얼마나 편중되어 사용되는 경향을 보이는가?
+              \item 이러한 계량적 분석을 통해, 개별 용언들이 활용 양상에서 보이는 질적인 차이를 어떻게 증명할 수 있는가?
+            \end{itemize}
+          \item[데이터 요약] 21세기 세종계획 최종 성과물(2011. 12. 수정판) > 형태ᆞ의미분석 말뭉치
+        \end{description}
+
+  \item \textbf{최운호 (2017).} 한국어 ‘명사 + 격조사’ 결합의 양상, \da{언어학}, 78, 3-30, \href{http://dx.doi.org/10.17290/jlsk.2017..78.3}{http://dx.doi.org/10.17290/jlsk.2017..78.3}
+  
+        \begin{description}[font=\normalfont\bfseries, style=unboxed]
+          \item[연구질문] 실제 말뭉치 사용에 기반했을 때, 한국어 일반 명사는 격조사와 어떤 결합 양상과 분포를 보이며, 이를 통해 기존의 불완전 곡용 논의를 어떻게 실증적으로 검증하고 확장할 수 있는가?
+            \begin{itemize}
+              \item 말뭉치에서 개별 명사(예: '등골')는 어떤 격조사들과 결합하며, 각 결합 형태의 빈도 분포는 어떠한가?
+              \item 특정 명사의 전체 사용에서, 특정 격조사 결합형이 차지하는 비중(집중도)은 얼마나 되는가?
+              \item 개별 명사들의 분석 결과를 종합했을 때, 한국어 명사 전반에 걸쳐 나타나는 격조사 결합의 보편적인 경향성은 무엇인가?
+                \begin{itemize}
+                  \item 발표자 주의: 최운호(2015)와 비교하여 공통점과, 새로이 시도된 점을 설명할 것
+                \end{itemize}
+            \end{itemize}
+          \item[데이터 요약] 21세기 세종계획 최종 성과물(2011. 12. 수정판) > 형태ᆞ의미분석 말뭉치
+        \end{description}
+\end{enumerate}
+
+\section*{패키지 5: 구어 특유의 문법 현상 분석}
+
+\begin{enumerate}[label=\textbf{\arabic*.}] % Makes the number bold with a period
+
+  % --- Add New Papers Here ---
+  \item \textbf{서은아, 남길임, 서상규 (2004).} 구어 말뭉치에 나타난 조각문 유형 연구, \da{한글}, 264, 123-151. \href{https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART000936604}{KCI 링크}
+  
+        \begin{description}[font=\normalfont\bfseries, style=unboxed]
+          \item[연구질문] 대학생 구어 말뭉치에서 나타나는 조각문(fragment sentences)의 통사적 유형은 무엇이며, 그 특징과 실현 양상은 어떠한가?
+            \begin{itemize}
+              \item 문어 중심의 문장 개념이 아닌 억양 단위를 기준으로 분석했을 때, 구어 말뭉치에서 발견되는 조각문의 통사적 유형에는 어떤 것들이 있는가?
+              \item 가장 빈번하게 나타나는 조각문 유형은 본래의 통사적 기능을 넘어, 대화 속에서 어떤 추가적인 화용론적 기능을 수행하는가?
+              \item 구어 말뭉치에 통사 주석 정보를 부가하고 분석하는 것은, 기존의 문어 중심 문법이 설명하지 못했던 구어의 고유한 문장 유형과 특징을 밝히는 데 어떻게 기여하는가?
+            \end{itemize}
+          \item[데이터 요약] 연세대학교 언어정보연구원 구어 말뭉치 2만 어절(총 문장 4,760 개)
+        \end{description}
+
+  \item \textbf{이동석 (2014).} \sq{-냐}계 어미의 결합 분포에 대하여 -구어 말뭉치 분석을 중심으로-, \da{민족문화연구}, 64, 247-281. \href{http://dx.doi.org/10.17948/kcs.2014..64.247}{http://dx.doi.org/10.17948/kcs.2014..64.247}
+  
+        \begin{description}[font=\normalfont\bfseries, style=unboxed]
+          \item[연구질문] '-냐'계 의문형 어미('-냐', '-으냐', '-느냐')의 실제 구어 사용 양상은 기존 문법 기술과 어떻게 다르며, 이러한 차이를 바탕으로 이 어미들의 결합 제약을 어떻게 새롭게 기술해야 하는가?
+            \begin{itemize}
+              \item 문법서에서 설명하는 '-으냐'와 '-느냐'의 표준적인 결합 규칙은 실제 구어 말뭉치에서 얼마나 낮은 비율로 나타나는가?
+              \item 실제 구어에서 가장 지배적으로 나타나는 결합 패턴은 무엇인가? 
+              \item 문법적으로 설명되지만 실제로는 드물게 사용되는 '-느냐'는 어떤 특수한 환경에 한정되어 나타나는가?
+              \item 이러한 말뭉치 분석 결과를 바탕으로 국어사전과 문법서의 기술 내용은 현재 언어 현실을 반영하기 위해 어떻게 수정되어야 하는가?
+            \end{itemize}
+          \item[데이터 요약] 21세기 세종 계획 구어 말뭉치
+            \begin{itemize}
+              \item 발표자 주의: 이 연구에 사용된 21세기 세종 계획 구어 말뭉치가 원시 말뭉치인지 형태 분석 말뭉치인지 조사할 것
+            \end{itemize}
+        \end{description}
+
+  \item \textbf{이은경 (2015).} 구어 텍스트에서의 목적격 조사의 비실현 양상, \da{우리말글}, 64, 57-86. \href{http://dx.doi.org/10.18628/urimal.64..201503.57}{http://dx.doi.org/10.18628/urimal.64..201503.57}
+  
+        \begin{description}[font=\normalfont\bfseries, style=unboxed]
+          \item[연구질문] 한국어 구어 텍스트에서 목적격 조사의 비실현(생략)에 영향을 미치는 언어학적 요인들은 무엇이며, 각 요인은 어떤 조건에서 비실현을 유도하는가?
+            \begin{itemize}
+              \item 선행 체언의 유형은 목적격 조사의 비실현에 어떤 영향을 미치는가?
+              \item 후행 서술어의 종류 및 선행 명사구와의 거리는 목적격 조사의 비실현에 어떤 영향을 미치는가?
+              \item 후행 어미의 유형은 목적격 조사의 비실현에 어떤 영향을 미치는가?
+              \item 담화의 특성은 목적격 조사의 비실현과 어떤 관련이 있는가?
+            \end{itemize}
+          \item[데이터 요약] 21세기 세종계획 최종 성과물 DVD에 수록된 현대 구어 형태 분석 말뭉치 내 4개 파일
+        \end{description}
+
+\end{enumerate}
+
+\section*{패키지 6: 사용량 분석}
+
+\begin{enumerate}[label=\textbf{\arabic*.}] % Makes the number bold with a period
+
+  % --- Add New Papers Here ---
+  \item \textbf{문재현, 김미란 (2018).} 탈어휘 동사 get의 구문과 의미 유형별 빈도: 교과서 듣기지문과 구어자료 비교, \da{언어와 정보 사회}, 34, 59-86, \href{http://dx.doi.org/10.29211/soli.2018.34..003}{http://dx.doi.org/10.29211/soli.2018.34..003}
+  
+        \begin{description}[font=\normalfont\bfseries, style=unboxed]
+          \item[연구질문] 고등학교 영어 교과서에 나타난 탈어휘 동사 \sq{get}의 사용 빈도 및 양상은 실제 구어 데이터와 어떻게 다른가?
+            \begin{itemize}
+              \item 문법적 구조와 의미 유형의 분포 측면에서, 교과서의 'get' 사용은 실제 구어와 비교했을 때 어떤 과용(overuse) 또는 과소사용(underuse) 경향을 보이는가?
+              \item 교과서와 실제 언어 사용 사이의 이러한 불일치는, 영어 학습자의 빈도 기반 어휘 학습과 자연스러운 어휘 선택에 어떤 잠재적 문제를 야기할 수 있는가?
+            \end{itemize}
+          \item[데이터 요약] 고등학교 영어 교과서 8종의 듣기 활동 지문, SBC(Santa Barbara Corpus of Spoken American English), 온라인 테드(TED) 강연 강연 전사(transcripts) 423개
+        \end{description}
+
+  \item \textbf{이나, 이찬규 (2025).} 신어의 사용 빈도와 사전 등재의 관련성에 관한 연구 - 신어 정착 요인의 정량적 기준 설정 -, \da{언어학 연구}, 74, 61-91. \href{http://dx.doi.org/10.17002/sil..74.202501.61}{http://dx.doi.org/10.17002/sil..74.202501.61}
+  
+        \begin{description}[font=\normalfont\bfseries, style=unboxed]
+          \item[연구질문] 신조어의 정착에 영향을 미치는 요인들을 통계적으로 측정할 수 있는 정량적 기준은 무엇이며, 이 기준은 신조어의 사전 등재 가능성을 얼마나 잘 예측하는가?
+            \begin{itemize}
+              \item 빅카인즈(BIG KINDS)와 같은 실제 미디어 사용 데이터를 활용하여 신조어의 실제 사용 빈도, 등장 기사 수, 연도별 분포를 어떻게 측정할 수 있는가?
+              \item 이러한 측정치를 바탕으로 신조어 정착을 판단하는 객관적이고 정량적인 기준을 어떻게 설정할 수 있는가?
+              \item 제안된 정량적 기준을 충족하는 신조어들은 실제로 전자 사전에 등재될 확률과 어떤 상관관계를 보이는가?
+            \end{itemize}
+          \item[데이터 요약] 국립국어원 2012년 신어 자료집, 빅카인즈(BIG KINDS) 2012년 1월 1일 ~ 2023년 12월 31일 기사
+        \end{description}
+
+  \item \textbf{정지은 (2019).} 한국어 사전 표제어 발음형의 음소 빈도 연구, \da{언어와 언어학}, 83, 179-218. \href{http://dx.doi.org/10.20865/20198307}{http://dx.doi.org/10.20865/20198307}
+  
+        \begin{description}[font=\normalfont\bfseries, style=unboxed]
+          \item[연구질문] 『우리말샘』 표제어의 발음 정보에 나타난 한국어 음소의 빈도 분포는 어떠한가?
+            \begin{itemize}
+              \item 음절을 초성, 중성, 종성으로 나누었을 때, 각각의 음소별 사용 빈도 순위는 어떻게 나타나는가?
+              \item 초성, 중성, 종성의 빈도는 어두, 어중, 어말이라는 음절 위치에 따라 어떻게 다르게 나타나는가?
+              \item 이러한 빈도 분석 결과를 바탕으로, 각 음절 위치(어두, 어중, 어말)에서 가장 대표적으로 사용되는 음절은 무엇인가?
+            \end{itemize}
+          \item[데이터 요약] 우리말샘 표제어
+            \begin{itemize}
+              \item 발표자 주의: 데이터의 구체적인 선정 기준과, 데이터 선정에 대한 심사자 의견 및 그에 대한 답변도 논의에 포함시킬 것
+            \end{itemize}
+        \end{description}
+
+
+\end{enumerate}
+
+\section*{패키지 7: 장르별 차이 분석}
+
+\begin{enumerate}[label=\textbf{\arabic*.}] % Makes the number bold with a period
+
+  % --- Add New Papers Here ---
+  \item \textbf{김령환 (2020).} \sq{때문}의 텍스트 장르별 사용 양상과 의미 특성 -구어, 신문, 소설, 학술논문 텍스트를 중심으로-, \da{語文學}, 148, 3-32. \href{https://doi.org/10.37967/emh.2020.06.148.3}{https://doi.org/10.37967/emh.2020.06.148.3}
+  
+        \begin{description}[font=\normalfont\bfseries, style=unboxed]
+          \item[연구질문] 구어, 소설, 신문, 학술논문이라는 네 가지 장르에 따라, '때문'의 사용 양상과 의미 특성은 어떻게 다르게 나타나는가?
+            \begin{itemize}
+              \item 네 가지 장르에 따라 ‘때문에’, ‘때문이다’ 등 주요 활용형의 사용 빈도 분포는 어떻게 다른가?
+              \item 각 장르에서 특징적으로 나타나는 의미적, 화용론적 기능은 무엇인가?
+            \end{itemize}
+          \item[데이터 요약] 21세기 세종계획 형태 분석 (현대 문어) 말뭉치, 21세기 세종계획 현대 구어 말뭉치의 일상대화, 국어 교과의 <문학> 과목의 현대 소설 작품 58편, 21세기 세종계획 원시 문어 말뭉치 중 신문, 국어국문학 분야의 전문 학술지 \da{어문론총} 36~54호에 실린 논문 138편, 
+        \end{description}
+        
+  \item \textbf{이유라 (2021).} 한국어 정도부사의 사용역별 출현 빈도 및 헤지성 분석, \da{언어학 연구}, 60, 115-131. \href{http://doi.org/10.17002/sil..60.202107.115}{http://doi.org/10.17002/sil..60.202107.115}
+  
+        \begin{description}[font=\normalfont\bfseries, style=unboxed]
+          \item[연구질문] 한국어 정도부사들은 사용역(register)에 따라 어떤 빈도 분포와 사용 양상의 차이를 보이며, 이러한 차이는 각 부사가 가진 '헤지(hedge)' 기능과 어떤 관련이 있는가?
+            \begin{itemize}
+              \item 구어, 소설, 신문, 학술논문이라는 네 가지 사용역에 따라, 각 정도부사의 출현 빈도는 어떻게 다르게 나타나는가?
+              \item 각 정도부사의 사용 양상은 특정 사용역(예: 구어, 격식적 문어)에 대한 선호도를 보이는가?
+              \item 이 정도부사들이 공통적으로 가지는, 수식 대상에 의도적으로 모호성을 부여하는 '헤지(hedge)' 기능은 이들의 사용 양상과 어떤 관련이 있는가?
+            \end{itemize}
+          \item[데이터 요약] SJ-RIKS (Sejong-Research Institute of Korean Studies) 확장판 말뭉치
+        \end{description}
+
+  \item \textbf{현영희 (2023).} 신문 주제에 따른 인용명사 구문의 특성 연구, \da{한글}, 84(2), 479-502. \href{https://doi.org/10.22557/HG.2023.6.84.2.479}{https://doi.org/10.22557/HG.2023.6.84.2.479}
+  
+        \begin{description}[font=\normalfont\bfseries, style=unboxed]
+          \item[연구질문] 신문의 주제 영역(경제, 문화, 사회 등)에 따라, 인용명사 구문의 사용 양상과 의미 기능은 어떻게 다른가?
+            \begin{itemize}
+              \item 각 주제 영역별로 선호되는 인용명사 구문의 유형(생각, 사실, 발화 인용)은 무엇이며, 그 빈도 분포는 어떻게 다른가?
+              \item 각 주제 영역에서 특정 인용명사 구문은 화자의 주관성을 강조하거나 내용을 객관화하는 등 어떤 전략적, 인지적 기능을 수행하는가?
+              \item 이러한 사용 양상의 차이는 각 주제 영역의 고유한 주제적 특성과 어떤 관련이 있는가?
+            \end{itemize}
+          \item[데이터 요약] 21세기 세종계획 형태분석 말뭉치의 신문 기사문 중 ‘경제, 문화, 사회’ 3가지 주제 영역
+        \end{description}
+
+\end{enumerate}
+
+\section*{패키지 8: 화자에 따른 차이 분석}
+
+\begin{enumerate}[label=\textbf{\arabic*.}] % Makes the number bold with a period
+
+  % --- Add New Papers Here ---
+  \item \textbf{문경민 외 (2025).} 한국 중노년층 화자의 의문문 사용 양상: 코퍼스 기반 분석, \da{언어과학}, 32(2), 29-51. \href{http://dx.doi.org/10.14384/kals.2025.32.2.029}{http://dx.doi.org/10.14384/kals.2025.32.2.029}
+  
+        \begin{description}[font=\normalfont\bfseries, style=unboxed]
+          \item[연구질문] 50세 이상 한국어 화자들의 의문문 사용 양상은 노화, 성별, 교육 수준이라는 사회적 요인에 따라 어떻게 달라지는가?
+            \begin{itemize}
+              \item 나이와 교육 수준은 의문문의 전체 사용 빈도에 각각 어떤 영향을 미치는가?
+              \item 성별에 따라 전체 의문문 사용 빈도와, WH-의문문/Y/N-의문문의 선호도에 차이가 있는가?
+              \item 노화, 교육, 성별 중 어떤 요인이 의문문 사용에 가장 큰 영향을 미치는가?
+              \item 교육적 참여가 노화와 관련된 언어 변화를 상쇄하는 데 도움이 될 수 있는가?
+            \end{itemize}
+          \item[데이터 요약] AI-Hub 2-18 중노년층 방언 데이터(NIA 2-18 데이터)
+        \end{description}
+
+  \item \textbf{이주희, 김소은 (2024).} 메신저 말뭉치의 표기에 나타난 음운 교체 현상: 서울지역의 20 대 남녀를 중심으로, \da{음성음운형태론연구}, 30(3), 343-372. \href{http://dx.doi.org/10.17959/sppm.2024.30.3.343}{http://dx.doi.org/10.17959/sppm.2024.30.3.343}
+  
+        \begin{description}[font=\normalfont\bfseries, style=unboxed]
+          \item[연구질문] 20대 서울 젊은이들의 메신저 대화에서 나타나는 음소 대치(phoneme substitution) 현상은 구어의 음운론적 특징을 어떻게 반영하며, 이러한 양상은 성별에 따라 어떤 차이를 보이는가?
+            \begin{itemize}
+              \item 메신저 대화에서 나타나는 모음 대치의 빈도와 패턴은 성별에 따라 어떻게 다른가?
+              \item 남성과 여성 화자에게서 각각 가장 빈번하게 대치되는 모음은 무엇인가?
+              \item 평음과 경음 사이의 자음 대치 선호도는 성별에 따라 어떤 차이를 보이며, 그 이유는 무엇인가?
+            \end{itemize}
+          \item[데이터 요약] 국립국어원 메신저 말뭉치(버전 2.0) 서울 지역 20대 남녀(친밀도 5 이상)
+        \end{description}
+        
+  \item \textbf{박선우, 박진아, 홍정의 (2015).} SNS 모바일 텍스트의 언어학적 양상: 성별과 연령의 차이를 중심으로, \da{현대문법연구}, 82, 95-120. \href{http://dx.doi.org/10.14342/smog.2015.82.95}{http://dx.doi.org/10.14342/smog.2015.82.95}
+  
+        \begin{description}[font=\normalfont\bfseries, style=unboxed]
+          \item[연구질문] 한국어 SNS 모바일 텍스트의 특징적인 언어 사용 양상은 무엇이며, 이러한 양상은 사용자의 성별과 세대에 따라 어떻게 다른가?
+            \begin{itemize}
+              \item 비표준적 표기법, 이모티콘, 문장 부호의 사용 빈도는 성별에 따라 어떤 차이를 보이는가?
+              \item 텍스트의 길이는 세대에 따라 어떻게 다른가?
+              \item 자음만으로 된 초성체(acronyms)와 비표준적 표기법의 사용 빈도는 나이와 어떤 상관관계를 보이는가?
+            \end{itemize}
+          \item[데이터 요약] ‘페이스북’ 댓글
+        \end{description}
+
+\end{enumerate}
+
+\section*{패키지 9: 분석 대상의 확장}
+
+\begin{enumerate}[label=\textbf{\arabic*.}] % Makes the number bold with a period
+
+  \item \textbf{심재형 (2017).} 언어경관 (Linguistic Landscape)과 상권 유동인구 간의 상관관계 : 경기도 안양권(안양, 군포, 의왕) 사례를 중심으로, \da{사회언어학}, 25(1), 85-117. \href{http://dx.doi.org/10.14353/sjk.2017.25.1.04}{http://dx.doi.org/10.14353/sjk.2017.25.1.04}
+  
+        \begin{description}[font=\normalfont\bfseries, style=unboxed]
+          \item[연구질문] 안양권 도시에서, 상업 지구의 유동 인구 규모는 그 지역의 언어 경관(구체적으로, 상업 간판의 영어 사용률)과 어떤 관계가 있는가?
+            \begin{itemize}
+              \item 유동 인구의 규모와 상업 간판의 영어 사용 비율 사이에는 통계적으로 유의미한 상관관계가 있는가?
+              \item 구도심의 쇠퇴와 신흥 상업 지구의 부상과 같은 도시 개발의 양상은 각 지역의 영어 사용률 차이에 어떻게 반영되는가?
+              \item 이러한 언어 경관의 차이는 각 상업 지구의 경제적 지위를 어떻게 반영하는가?
+            \end{itemize}
+          \item[데이터 요약] 안양권 3개 도시(안양, 군포, 의왕)의 8개 주요 역세권 간판 및 유동인구 자료
+        \end{description}
+
+  \item \textbf{나은미 (2003).} 人命에 대한 사회언어학적 연구, \da{사회언어학}, 11(1), 95-118. \href{https://scholar-kyobobook-co-kr-ssl.libproxy.snu.ac.kr/article/detail/4030008913271}{교보 스콜라 링크}
+  
+        \begin{description}[font=\normalfont\bfseries, style=unboxed]
+          \item[연구질문] 한국인의 이름에 나타나는 세대별, 성별 차이는 무엇이며, 이러한 변화와 차이에는 어떤 사회적 기준이나 가치가 반영되어 있는가?
+            \begin{itemize}
+              \item 시대별(1940년대, 60년대, 80년대, 90년대)로, 그리고 성별에 따라 이름에 가장 선호되는 한자는 무엇이며 어떻게 변화했는가?
+              \item 이름의 마지막 소리(종성)와 같은 음운론적 특징은 성별에 따라 어떤 차이를 보이는가?
+              \item 이러한 선호 한자와 음운론적 특징의 변화는 당대의 사회적 가치나 기준의 변화를 어떻게 반영하는가?
+            \end{itemize}
+          \item[데이터 요약] 설문지 응답
+        \end{description}
+
+  \item \textbf{염수원 (2025).} \sq{ㅟ+ㅓ}의 준말 표기 \sq{ㅕ}의 사용에 관한 양적·질적 탐구: 컴퓨터 매개 문어 말뭉치를 대상으로, \da{사회언어학}, 33(1), 117-143. \href{http://dx.doi.org/10.14353/sjk.2025.33.1.05}{http://dx.doi.org/10.14353/sjk.2025.33.1.05}
+  
+        \begin{description}[font=\normalfont\bfseries, style=unboxed]
+          \item[연구질문] 일상적인 문자 대화에서 비표준 축약형 \sq{ㅕ}는 어떤 빈도로 사용되며, 대화의 순차적 구조 속에서 어떤 상호작용적 기능을 수행하는가?
+            \begin{itemize}
+              \item 여러 말뭉치에서 축약형 \sq{ㅕ}는 표준형 \sq{ㅟㅓ}와 비교하여 얼마나 자주 사용되며, 화자-청자 간의 친밀도와 같은 관계적 맥락은 그 사용에 어떤 영향을 미치는가?
+              \item 대화분석의 관점에서 볼 때, 축약형 \sq{ㅕ}를 사용하는 것은 대화의 순차적 구조 내에서 친화감 형성(affiliation)과 같은 상호작용적 기능을 어떻게 달성하는가?
+            \end{itemize}
+          \item[데이터 요약] 국립국어원 모두의 말뭉치 내 메신저 말뭉치 (버전 2.0), 비출판물 말뭉치(버전 1.2), 온라인 게시 자료 말뭉치 2022(버전 1.0), 온라인 대화 말뭉치(버전 1.1)
+        \end{description}
+
+\end{enumerate}
+
+\section*{패키지 10: 변이와 변화 분석}
+
+\begin{enumerate}[label=\textbf{\arabic*.}] % Makes the number bold with a period
+
+  % --- Add New Papers Here ---
+  \item \textbf{김지영, 황선희 (Year).} 말순서 처음에 드러난 담화표지 사용의 세대 차이 연구: 국립국어원 말뭉치 분석을 바탕으로, \da{언어와 정보 사회}, 54, 71-98. \href{http://dx.doi.org/10.29211/soli.2025.54..003}{http://dx.doi.org/10.29211/soli.2025.54..003}
+  
+        \begin{description}[font=\normalfont\bfseries, style=unboxed]
+          \item[연구질문] 10-20대와 50-60대 여성 화자 집단은 발화 시작 위치에서 사용하는 담화 표지(Discourse Markers)의 유형과 기능 면에서 어떤 차이를 보이며, 이러한 차이는 각 세대의 대화 전략을 어떻게 반영하는가?
+            \begin{itemize}
+              \item 젊은 세대와 나이 든 세대에서 각각 가장 빈번하게 사용되는 담화 표지의 기능적 유형(예: 인지적, 수사적)은 무엇인가?
+              \item 젊은 세대는 자신의 생각 과정을 드러내거나 대화의 흐름을 바꾸는 주도적인(dominant) 전략을 더 많이 사용하는가?
+              \item 나이 든 세대는 동의나 맞장구를 통해 대화의 흐름을 유지하는 협력적인(cooperative) 전략을 더 많이 사용하는가?
+            \end{itemize}
+          \item[데이터 요약] 국립국어원 일상 대화 말뭉치 2021’(버전 1.0) 
+        \end{description}
+
+  \item \textbf{장교진, 신지영 (2024).} 1990년대와 2010년대 이후 드라마 자료 분석을 통해 살펴본 \{네\}, \{예\} 사용의 변이와 변화, \da{사회언어학}, 32(4), 123-147. \href{http://dx.doi.org/10.14353/sjk.2024.32.4.05}{http://dx.doi.org/10.14353/sjk.2024.32.4.05}
+  
+        \begin{description}[font=\normalfont\bfseries, style=unboxed]
+          \item[연구질문] 1990년대와 2010년대 한국 드라마에서, 화자의 성별과 담화 상황(공적/사적)에 따라 응답 표현 \sq{네}와 \sq{예}의 사용 양상은 어떻게 변화했는가?
+            \begin{itemize}
+              \item 1990년대 드라마에서, 남성 인물과 여성 인물은 공적 상황과 사적 상황에 따라 \sq{네}와 \sq{예}를 각각 어떻게 다르게 사용했는가?
+              \item 2010년대 드라마에서, 남성 인물과 여성 인물은 공적 상황과 사적 상황에 따라 \sq{네}와 \sq{예}를 각각 어떻게 다르게 사용했는가?
+              \item  1990년대와 비교했을 때, 2010년대에 나타난 가장 두드러진 변화는 무엇이며, 특히 공적 상황에서의 사용 양상은 어떻게 변했는가?
+            \end{itemize}
+          \item[데이터 요약] 드라마 8편, 총 40회차
+        \end{description}
+
+  \item \textbf{심주희 (2023).}  식당 내 호칭 \sq{저기요}, \sq{여기요}를 대상으로 한 사회언어학적 변이 연구, \da{담화와 인지}, 30(1), 53-78. \href{http://dx.doi.org/10.15718/discog.2023.30.1.53}{http://dx.doi.org/10.15718/discog.2023.30.1.53}
+ 
+        \begin{description}[font=\normalfont\bfseries, style=unboxed]
+          \item[연구질문] 식당에서 호출어 \sq{저기요}와 \sq{여기요}의 사용 양상에 나타나는 연령별 차이는, 나이 그 자체 때문인가, 아니면 나이와 관련된 다른 사회적 요인으로 설명될 수 있는가?
+            \begin{itemize}
+              \item 화자의 나이와 성별은 \sq{저기요}와 \sq{여기요}의 선택에 통계적으로 유의미한 영향을 미치는가?
+              \item 나이에 따른 사용 양상의 차이를 다른 요인의 상호작용으로 설명할 수 있는가?
+              \item \sq{저기요}와 \sq{여기요}는 어떤 차이를 보이는가?
+            \end{itemize}
+          \item[데이터 요약] 설문조사
+        \end{description}
+\end{enumerate}
+
+% \printbibliography[keyword=kobib]
+% \printbibliography[notkeyword=kobib,heading=none]
+
+
+\end{document}

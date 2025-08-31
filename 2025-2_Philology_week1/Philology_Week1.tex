@@ -1,0 +1,751 @@
+\documentclass[11pt, aspectratio=169]{beamer}
+
+% --- Core Packages for Modern Documents ---
+\usepackage{fontspec}      
+\usepackage{unicode-math}
+\usepackage{xeCJK}         
+\usepackage{graphicx}      
+% \usepackage[beamer]{enumitem}
+% \usepackage{tcolorbox}
+% \tcbuselibrary{minted}
+% \usepackage{fontawesome5}
+\usepackage{minted}
+
+\xeCJKsetup{CJKspace=true}
+
+% --- Font Setup ---
+\setsansfont{Noto Sans KR}
+\setmainfont{Noto Serif KR}
+\setmonofont{D2Coding}
+
+\setCJKsansfont{Noto Sans KR}
+\setCJKmainfont{Noto Serif KR}
+\setCJKmonofont{D2Coding}
+
+\setmathfont{Latin Modern Math}
+
+\mode<presentation>
+{
+  \usetheme{default}      % or try Darmstadt, Madrid, Warsaw, Marburg...
+  \usecolortheme{dove} % or try albatross, beaver, crane, dove...
+  \usefonttheme{default}  % or try serif, structurebold, ...
+  \setbeamertemplate{navigation symbols}{}
+  \setbeamertemplate{caption}[numbered]
+} 
+
+\setbeamertemplate{sidebar canvas right}[vertical shading][top=gray,bottom=white] 
+
+\AtBeginSection[]{
+  \begin{frame}
+    \vfill % Vertically center the title
+    \centering
+    \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+      \usebeamerfont{title}\insertsectionhead\par
+    \end{beamercolorbox}
+    \vfill
+  \end{frame}
+}
+
+\renewcommand{\arraystretch}{1.3} % Set row height for ALL tables in the document to 1.5x
+
+\definecolor{Highlight}{HTML}{FFF2CC} % A soft yellow
+
+% \setlist[itemize]{itemsep=5pt}
+
+\definecolor{MonokaiBackground}{HTML}{272822}
+\definecolor{blockbody}{HTML}{EEEEEE}
+\setbeamercolor{block title}{bg=gray, fg=white}
+\setbeamercolor{block body}{bg=blockbody, fg=black}
+\setbeamertemplate{footline}{
+  \hfill % Pushes the content to the right
+  \usebeamercolor{page number in head/foot}
+  \usebeamerfont{page number in head/foot}
+  \insertframenumber{} / \inserttotalframenumber
+  \hspace*{2ex} % Adds a little padding from the right edge
+}
+
+\setminted{
+    style=default, % dracula, native, monokai...
+    % everyminted=\color{white},
+    linenos,       % Show line numbers
+    % bgcolor=MonokaiBackground,
+    frame=lines,   % Draw a thin frame around the code
+    framesep=2mm,
+    xleftmargin=6pt,
+    breaklines=true
+}
+
+\title[문헌학연습]{문헌학연습: 한국어 자료의 활용}
+\subtitle{1주차 문헌의 연구}
+\author{김미경}
+% \institute{서울대학교}
+\date{2025.9.1}
+
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+% Uncomment these lines for an automatically generated outline.
+%\begin{frame}{Outline}
+%  \tableofcontents
+%\end{frame}
+
+\section{문헌 사용 연구}
+
+\begin{frame}[t]{왜 문헌을 쓰는가}
+
+  \begin{block}{유일한 옵션일 때가 있다}
+    \begin{itemize}
+      \item 과거의 언어
+      \item 용례의 사용량
+      \item 용례의 다양성
+      \item 화자가 의식하지 못하는 특성
+    \end{itemize}
+  \end{block}
+
+  \begin{block}{화자를 모을 필요가 없다}
+    \begin{itemize}
+      \item 가설을 즉각 확인할 수 있다
+      \item 시행착오를 몇번이고 거칠 수 있다
+      % \item IRB 심의를 거칠 필요가 없다
+      % \item 사례비가 들지 않는다
+    \end{itemize}    
+  \end{block}
+\end{frame}
+
+\begin{frame}[t]{문헌을 사용한 언어 연구}
+  \begin{block}{경험적 연구(Empirical study)}
+    \begin{itemize}
+      \item 언어표현 X가 어떻게 쓰이는가?
+      \item 언어표현 X가 얼마나 쓰이는가?
+      \item 언어표현 X가 무엇과 함께 쓰이는가?
+      \item 언어표현 X가 어떤 환경에서 자주 쓰이는가?
+      \item 언어표현 X의 출현에 영향을 미치는 요소는 무엇인가?
+    \end{itemize}
+  \end{block}  
+\end{frame}
+
+
+\section{문헌 관련 분야들}
+
+\subsection{문헌 연구 분야}
+\begin{frame}[t]{문헌 연구 분야}
+  \begin{block}{고전 연구}
+      \begin{tabular}{ccl}
+        \textbf{관심사} & \textbf{목표}  & \textbf{학문 분과} \\
+        \hline
+        사상 & 원전 복원 & 문헌학/고전학 \\
+         & & (Philology/Classical studies)\\
+        텍스트 & 조어 재구 & 역사비교언어학  \\
+         & & (Historical Comparative Linguistics) \\
+        매체 & 선본 확립 & 서지학 (Bibliography) \\
+      \end{tabular}        
+  \end{block}
+\end{frame}
+
+\begin{frame}[t]{문헌 연구 분야}
+  \begin{block}{모든 기록 연구}
+      \begin{tabular}{ccl}
+        \textbf{관심사} & \textbf{목표}  & \textbf{학문 분과} \\
+        \hline
+        매체 & 수집/분류 & 문헌정보학 \\
+         & & (Library and Information Science)\\
+        텍스트 & 진본 보존 & 기록관리학/기록학  \\
+         & & (Archival Science/Studies) \\
+      \end{tabular}        
+  \end{block}
+\end{frame}
+
+\subsection{문헌학 \& 역사언어학}
+\begin{frame}[t]{문헌학과 역사언어학의 관계}
+  \begin{block}{문헌학의 도구로서의 과거 언어 연구}
+    18세기 문헌학 내에 비교 문법 개설
+  \end{block}
+  % \begin{itemize}[leftmargin=40pt]
+  %   \item Comparative philology
+  % \end{itemize}
+
+  \begin{block}{언어학의 도구로서의 과거 문헌 연구}
+    문헌학은 19세기 역사비교언어학 연구자의 상식
+  \end{block}
+  % \begin{itemize}[leftmargin=40pt]
+  %   \item Comparative linguistics
+  % \end{itemize}
+
+  \begin{block}{언어학의 하위 연구 분야}
+    \begin{itemize}
+      \item 역사비교언어학이 언어학의 하위 분야로 밀려남
+      \item 문헌학이 더 이상 상식이 아님
+      \item 과거의 언어연구 + 문헌 연구가 언어학과에서 ‘문헌학’으로 통용
+    \end{itemize}
+  \end{block}
+    % \begin{itemize}[leftmargin=40pt]
+    %   \item Historical comparative linguistics
+    %   \item English Philology, Spanish Philology
+    % \end{itemize}    
+\end{frame}
+
+\subsection{서지학 \& 역사언어학}
+\begin{frame}[t]{서지학과 역사언어학의 관계}
+  \begin{block}{언어학의 도구로서 과거 문헌 연구}
+    매체의 특성을 통해 텍스트의 생산 시기와 작성자의 계통 판별
+  \end{block}
+
+  \begin{block}{한중일}
+    ‘서지학’ 활용 (서지학과 문헌학의 분리)
+  \end{block}
+  
+  \begin{block}{서양}
+    ‘문헌학’ 활용 (서지학이 문헌학의 일부)
+  \end{block}
+\end{frame}
+
+\subsection{종합}
+\begin{frame}[t]{종합: 왜 문헌을 공부하나?}
+  \begin{block}{기록을 용례로 변환}
+    문자 해독    
+  \end{block}
+
+  \begin{block}{용례의 메타정보 이해}
+    \begin{itemize}
+          \item 용례의 시기 판별
+          \item 용례의 발화자 판별
+          \item 용례의 장르 판별
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\subsection{관련 분야}
+\begin{frame}[t]{관련 분야: 이론/역사언어학 연구}
+  \begin{block}{분류}
+        연구 목적에 따른 언어학의 한 분야
+  \end{block}
+  \begin{block}{목표}
+        언어 표현의 공시적/통시적 특성을 설명함
+  \end{block}
+    \begin{itemize}
+      \item 언어표현 X는 Z라는 성질을 가진다
+      \item 언어표현 X의 성질 Z는 시간이 흐르면서 변화했다
+    \end{itemize}        
+  \begin{block}{문헌과의 관계}
+        문헌에서 추출한 용례를 증거로 활용
+  \end{block}
+\end{frame}
+
+\section{문헌의 확장과 관련분야 확대}
+
+\subsection{‘문헌’ 개념의 확장}
+\begin{frame}[t]{‘문헌’ 개념의 확장}
+  \begin{block}{{《서지학개론》 서문 중, 한울아카데미, 2004}}
+    서지학은 문헌을 대상으로 과학적으로 연구하는 학문이다. 서양에서는 기원전 2세기 고대 그리스에, 동양은 기원전 1세기 전한시대에 비롯되었다. 인류문화의 발전에 따라 문헌의 개념이 변화되어 오늘날은 \textbf{문헌이란 기록된 정보원을 총칭하는 개념}이 되었다. 따라서 문헌이란 기록된  정보를 전달하는 모든 수단 —도서, 잡지, 소책자, 마이크로필름, 오디오 및 비디오테이프, 슬라이드, 점자, 영화필름, 디스켓, 시디롬, 광디스크, 전자책, 데이터베이스 등—을 의미한다.
+  \end{block}
+\end{frame}
+
+\begin{frame}[t]{‘문헌’ 개념의 확장}
+  \begin{block}{새로운 분야의 발전}
+      디지털인문학(Digital Humanities)
+  \end{block}
+  
+  \begin{block}{역사언어학의 ‘문헌’ 확대}
+    \begin{itemize}
+      \item 고문헌
+      \item 고문헌 및 20세기 이후 언어의 전산입력자료 (new!)
+      \item 전산입력자료로 편찬한 말뭉치 (new!)
+    \end{itemize}    
+  \end{block}
+\end{frame}
+
+\begin{frame}[t]{확장된 문헌의 자료 양태}
+  \begin{block}{고문헌}
+    20세기 이전 기록물의 원본 및 영인본
+  \end{block}
+
+  \begin{block}{전산입력자료}
+      \begin{itemize}
+        \item 고문헌 및 20세기 이후 출판물의 전산화 자료
+        \item 20세기 이후 컴퓨터로 생산된 언어자원 
+      \end{itemize}
+  \end{block}
+
+  \begin{block}{말뭉치}
+      \begin{itemize}
+        \item 목적을 가지고 선정된 전산입력자료
+        \item 추가 정보가 부착된 전산입력자료
+      \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}[t]{확장된 문헌의 특성 비교}
+  \begin{block}{문헌 비교}
+    \begin{center}
+      \begin{tabular}{c|c|c}
+        \textbf{고문헌} & \textbf{전산입력자료} & \textbf{말뭉치} \\
+        \hline
+        소수의, 거의 유일한 증거 & 대량의 다양한 증거 & 대표성이 있는 증거 \\
+        특이 용례 중심 & 다수 용례 중심 & 분포 중심 \\
+        질적 연구 위주 & 질적 및 양적 연구 & 양적 연구 \\
+      \end{tabular}
+    \end{center}    
+  \end{block}
+  
+\end{frame}
+
+\subsection{확장된 관련 분야들}
+
+\begin{frame}[t]{관련 분야의 확장}
+  \begin{block}{과거의 문헌}
+    \begin{itemize}
+      \item 유물로서의 고문헌을 하나하나 다룸
+      \item 용례 하나 하나를 주의깊게 분석
+    \end{itemize}
+  \end{block}
+  \begin{itemize}
+    \item 고문헌의 특성과 취급요령: 서지학
+    \item 용례의 분석: 이론/역사언어학 (질적) 연구
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[t]{관련 분야의 확장}
+  \begin{block}{확장된 문헌}
+    \begin{itemize}
+      \item 전산상에 존재하는 대량의 문헌을 동시에 다룸
+      \item 용례들의 분포와 빈도가 중요해짐
+      \item 연구자가 생각하지 못한 대상을 발견할 수 있게 됨
+    \end{itemize}
+  \end{block}
+  \begin{itemize}
+    \item 대량 문헌의 특성과 취급요령: 말뭉치 언어학, 컴퓨터 언어학
+    \item 새 패턴 발견: 말뭉치 언어학, 컴퓨터 언어학
+    \item 분포와 빈도 세기: (이론/역사언어학) 양적 연구
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}[t]{관련 분야: 양적 연구}
+  \begin{block}{분류}
+    연구방법론의 일종
+  \end{block}
+
+  \begin{block}{목표}
+    \begin{itemize}
+      \item 언어 표현의 공시적/통시적 특성을 숫자로 표현된 증거로 설명
+      \item 숫자의 많고 적음에 의미 부여(항상 전체 수치 필요)
+    \end{itemize}
+  \end{block}
+  
+  \begin{block}{문헌과의 관계}
+    숫자를 세기 위해 문헌 자료가 필요함
+  \end{block}
+  % \begin{itemize}
+  %   \item 특성: 숫자의 많고 적음에 의미 부여(항상 전체 수치 필요)
+  %     \begin{itemize}
+  %       \item 십만어절 내에서 100회 출현
+  %       \item 백만어절 내에서 1000회 출현
+  %     \end{itemize}
+  %   \item 관계: 
+  % \end{itemize}
+\end{frame}
+
+\begin{frame}[t]{관련 분야: 말뭉치 언어학 연구}
+  \begin{block}{분류}
+    연구 자료에 따른 언어학의 하위 분야
+  \end{block}
+
+  \begin{block}{목표}
+    실제로 사용된 언어의 패턴을 관찰하고 기술
+  \end{block}
+  \begin{itemize}
+    \item 화자들은 실제로 이런 표현을 사용한다(corpus-based)
+    \item 언어 자료에서 예상치 못했던 패턴이 발견되었다(corpus-driven)
+  \end{itemize}
+
+  % \begin{block}{주요 관찰 대상}
+  %   빈도, 공기어, 문맥
+  % \end{block}
+
+  \begin{block}{문헌과의 관계}
+    문헌을 분석한다는 것 자체가 분야의 정체성
+  \end{block}
+\end{frame}
+
+\begin{frame}[t]{관련 분야: 컴퓨터 언어학 연구}
+  \begin{block}{분류}
+    연구 목적에 따른 응용언어학의 한 분야
+  \end{block}
+
+  \begin{block}{목표}
+    컴퓨터가 인간의 언어를 이해하고 생성하게 함
+  \end{block}
+      % \begin{itemize}[leftmargin=40pt]
+      %   \item 자동으로 이 말의 형태소/품사를 분석해 줘
+      %   \item 자동으로 이 말을 분류/번역/요약해 줘
+      %   \item 자동으로 이런 말을 작성해 줘
+      % \end{itemize}
+
+  \begin{block}{문헌와의 관계}
+    \begin{itemize}
+      \item 말뭉치 언어학의 결과물(말뭉치, 분석)을 핵심 재료로 사용
+      \item 말뭉치 생산을 주도함
+    \end{itemize}
+  \end{block}
+
+\end{frame}
+
+
+\section{문헌학연습}
+
+\subsection{일반적인 목표}
+
+\begin{frame}{문헌학연습의 목표}
+  \begin{block}{언어표현 X를 고문헌에서 찾기}
+    \begin{itemize}
+      \item 과거의 문자 학습
+      \item 과거 언어의 문법 학습
+      \item 과거 언어 텍스트 읽기 연습(강독)
+      \item 과거의 기록물 특성 익히기        
+    \end{itemize}    
+  \end{block}
+
+  \begin{block}{언어표현 X를 전산입력자료/말뭉치에서 찾기 (new!)}
+    \begin{itemize}
+      \item 전산입력자료와 말뭉치 파악하기
+      \item 말뭉치 편찬 이해하기
+      \item 언어표현 추출하기
+    \end{itemize}    
+  \end{block}
+\end{frame}
+
+\subsection{2025-2 목표}
+
+\begin{frame}{2025-2 문헌학연습의 목표}
+  \begin{block}{이론/역사언어학자인 나의 바람}
+    연구 대상 표현을 관찰하고 싶다
+  \end{block}
+
+  \begin{block}{실행상의 장벽}
+    \begin{tabular}{ll}
+      \textbf{대응} & \textbf{문제} \\
+      \hline
+      말뭉치에서 찾아보면 되겠지...? & 파일이 너무 많음 \\
+      코딩을 배우라고...? & 파이썬이 두려움 \\
+      말뭉치 파일 구조를 분석하라고...? & 텍스트 아닌 요소가 너무 많음 \\
+      이걸로 무슨 주장을 할 수 있지? & 주장 유형을 모름 \\
+    \end{tabular}
+  \end{block}
+\end{frame}
+
+\begin{frame}[t]{2025-2 문헌학연습의 목표}
+  \begin{block}{이 수업의 해결책}
+    \begin{itemize}
+      \item 전산입력자료/말뭉치에서 연구할 표현 추출하기
+      \item 언어 표현의 사용 양상을 토대로 할 수 있는 주장 살펴보기
+    \end{itemize}    
+  \end{block}
+
+  \begin{block}{목표하지 않는 것}
+    \begin{itemize}
+      \item 파이썬 전문가
+      \item 컴퓨터언어학자
+    \end{itemize}      
+  \end{block}
+
+\end{frame}
+
+\begin{frame}[t]{전산입력자료 및 말뭉치 분석을 위한 능력}
+  \begin{block}{Gries \& Newman (2014) ‘말뭉치 분석 소프트웨어에 필요한 기능’(일부)}
+    \begin{itemize}
+      \item 여러 개의 파일 열기
+      \item 여러 가지 인코딩 대응하기
+      \item 단어, 품사, 단어 연쇄 등의 빈도 세기
+      \item 정규식을 이용하여 지정한 패턴의 빈도 세기
+      \item 검색 결과를 출현 환경과 함께 제시하기
+      % \item 검색 결과와 함께 보여줄 출현 환경의 범위를 조절하기
+      \item 검색어의 공기어 보여주기
+      \item 단어간 관련성의 강도를 계산하기
+      % \item n-그램 목록 보여주기
+      \item 결과를 저장하고 파일로 내보내기
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\section{수업 계획}
+
+\begin{frame}[t]{수업 계획}
+  \begin{block}{1주차 (9/1)}
+    \begin{itemize}
+      \item 문헌과 언어학의 관계
+      \item 실습: Miniconda, VS Code, Jupyter Notebook 설치
+    \end{itemize}    
+  \end{block}
+
+  \begin{block}{2주차 (9/8)}
+    \begin{itemize}
+      \item 선행연구 분석(연구질문 \& 데이터 중심)
+      \item 실습: txt 파일 읽어오기
+    \end{itemize}    
+
+  % \begin{itemize}[leftmargin=40pt]
+  %   \item ‘연세 20세기 한국어 말뭉치’ 검색 결과
+  %   \item AI 허브 ‘대규모 구매도서 기반 한국어 말뭉치 데이터’(원천데이터)
+  % \end{itemize}
+
+  \end{block}
+
+\end{frame}
+
+\begin{frame}[t]{수업 계획}
+  \begin{block}{3주차 (9/15)}
+    \begin{itemize}
+      \item 선행연구 분석(연구질문 \& 데이터 중심)
+      \item 실습: csv, tsv 파일 읽어오기
+    \end{itemize}    
+  \end{block}
+
+  \begin{block}{4주차 (9/22)}
+    \begin{itemize}
+      \item 선행연구 분석(연구질문 \& 데이터 중심)
+      \item 실습: 데이터프레임 다루기
+    \end{itemize}    
+  \end{block}
+\end{frame}
+
+\begin{frame}[t]{수업 계획}
+  \begin{block}{5주차 (9/29)}
+    \begin{itemize}
+      \item 선행연구 분석(연구질문 \& 데이터 중심)
+      \item 실습: docx 읽어오기
+      \item 숨겨진 실습: 우리가 자주 쓸 파이썬 코드 이해하기
+        % \begin{itemize}
+        %   \item ‘21세기 세종계획 결과물’(txt)
+        %   \item ‘연세 20세기 한국어 말뭉치’ 검색 결과(xls) 
+        %   \item 모두의 말뭉치 ‘국어 역사 말뭉치(1.0)’(xml)
+        % \end{itemize}
+    \end{itemize}    
+  \end{block}
+
+  \begin{block}{6주차 (10/6 추석)}
+    보강 대신 자율학습
+  \end{block}
+\end{frame}
+
+\begin{frame}[t]{수업 계획}
+  \begin{block}{7주차 (10/13)}
+    \begin{itemize}
+      \item 선행연구 분석(연구질문 \& 데이터 중심)
+      \item 실습: XML과 그 변종들 읽어오기
+        % \begin{itemize}
+        %   \item 모두의 말뭉치 ‘일상대화 말뭉치’
+        %   \item AI 허브 ‘온라인 구어체 말뭉치 데이터’
+        % \end{itemize}
+    \end{itemize}    
+  \end{block}
+
+  \begin{block}{8주차 (10/20)}
+    \begin{itemize}
+      \item 개인연구 브레인스토밍
+      \item 실습: JSON 읽어오기
+    \end{itemize}    
+  \end{block}
+
+\end{frame}
+
+\begin{frame}[t]{수업 계획}
+
+  \begin{block}{9주차 (10/27)}
+    \begin{itemize}
+      \item 개인연구 주제 발표
+      \item 실습: 형태소 분석과 품사 부착(koNLPy)
+    \end{itemize}    
+  \end{block}
+
+  \begin{block}{10주차 (11/3)}
+    \begin{itemize}
+      \item 실습: 연어 분석
+      \item 개인연구 진도보고
+    \end{itemize}    
+  \end{block}
+
+  \begin{block}{11주차 (11/10)}
+    개인연구 중간발표
+  \end{block}
+
+\end{frame}
+
+\begin{frame}[t]{수업 계획}
+  \begin{block}{12주차 (11/17)}
+    \begin{itemize}
+      \item 그래프 그리기
+      \item 실습: 빈도 분석과 시각화
+    \end{itemize}    
+  \end{block}
+
+  \begin{block}{13주차 (11/24)}
+    \begin{itemize}
+      \item 실습: word2vec
+      \item 개인연구 진도보고
+    \end{itemize}    
+  \end{block}
+
+\end{frame}
+
+\begin{frame}[t]{수업 계획}
+  \begin{block}{14주차 (12/1)}
+    \begin{itemize}
+      \item 시기별 데이터를 이용한 변화의 추적
+      % \item 데이터 설명하기
+      \item 개인연구 진도보고
+    \end{itemize}    
+  \end{block}
+
+  \begin{block}{15주차 (12/8)}
+    개인연구 발표
+  \end{block}
+\end{frame}
+
+\section{실습}
+
+\begin{frame}[t]{상황 파악}
+  \begin{block}{나는...}
+    \begin{itemize}
+      \item 말뭉치에서 표현을 세서 데이터프레임으로 나타낼 수 있다.
+      \item 말뭉치에서 표현을 추출하여 용례만 파일로 저장할 수 있다.
+      \item 말뭉치 파일 여럿을 자동으로 읽어올 수 있다.
+      \item 파이썬을 다룰 수 있다.
+      \item 내 컴퓨터에 파이썬이 설치되어 있다.
+    \end{itemize}      
+  \end{block}
+\end{frame}
+
+\begin{frame}[t]{환경 갖추기: Miniconda 설치}
+  \begin{block}{1. 설치 파일 다운로드}
+    \begin{itemize}
+        \item 접속: \url{https://www.anaconda.com/download/success}
+        \item \textbf{Mac 사용자}: 본인 Mac의 칩 종류 확인 후 다운로드
+        \begin{itemize}
+            \item \textbf{Apple Silicon (M1/M2..):} `Download for Apple Silicon' 클릭
+            \item \textbf{Intel:} `Download for Intel' 클릭
+        \end{itemize}
+        \item \textbf{Windows 사용자}: 제안된 파일 다운로드
+    \end{itemize}
+  \end{block}  
+  \begin{block}{2. 설치 진행}
+    \begin{itemize}
+        \item \textbf{Mac}: 다운로드한 .pkg 파일 실행
+        \item \textbf{Windows}: 다운로드한 .exe 파일 실행 (설치 시 \textbf{`conda init' 관련 옵션 체크} 확인)
+    \end{itemize}    
+  \end{block}
+\end{frame}
+
+\begin{frame}[t, fragile]{환경 갖추기: Miniconda 설치}
+  \begin{block}{3. (매우 중요) 터미널/Anaconda Prompt 재시작}
+    \begin{itemize}
+        \item 설치 완료 후, 열려있는 모든 터미널 창을 닫고 새로 실행
+        \item 다음 명령어를 입력해서 설치가 되었는지 확인
+    \end{itemize}   
+  \end{block}
+  \begin{minted}{bash}
+python --version
+conda --version
+  \end{minted}
+\end{frame}
+
+\begin{frame}[t,fragile]{환경 갖추기: 파이썬 가상환경 만들기}
+  \begin{block}{1. 터미널 실행}
+    \begin{itemize}
+        \item \textbf{Mac}: `터미널(Terminal)' 앱 실행
+        \item \textbf{Windows}: 시작 메뉴에서 \textbf{'Anaconda Prompt'} 검색하여 실행 (\textbf{일반 터미널(cmd)이 아님!})
+    \end{itemize}    
+  \end{block}
+\end{frame}
+
+\begin{frame}[t, fragile]{환경 갖추기: 파이썬 가상환경 만들기}
+  \begin{block}{2. 가상환경 생성 및 실행 (아래 명령어 순서대로 입력)}
+        \begin{enumerate}
+            \item 파이썬 3.13 버전으로 `philology' 가상환경 생성
+            \begin{minted}{bash}
+conda create -n philology python=3.13 -y
+            \end{minted}
+            \item 생성한 가상환경 활성화
+            \begin{minted}{bash}
+conda activate philology
+            \end{minted}
+            \item 주피터 노트북 연결 프로그램 설치 (프롬프트 맨 앞에 (philology) 확인 후 진행)
+            \begin{minted}{bash}
+conda install ipykernel -y
+            \end{minted}
+        \end{enumerate}    
+  \end{block}  
+\end{frame}
+
+\begin{frame}[t]{환경 갖추기: VS code 설치하기}
+  \begin{block}{설치파일 내려받기 및 설치 진행}
+    \begin{itemize}
+      \item \url{https://code.visualstudio.com}
+      \item 제안된 파일 다운로드 및 설치
+      \item 설치 마지막 단계에서 `PATH에 추가' 옵션 확인
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}[t]{환경 갖추기: VS code 설정하기}
+
+  \begin{block}{VS code에서 작업 폴더 열기}
+    \begin{itemize}
+      \item 원하는 위치에 `언어학실습' 폴더 만들기
+      \item VS code 실행 후 `File > Open Folder...' 선택
+      \item 방금 만든 `언어학실습' 폴더를 열기
+      \item 앞으로 모든 실습 파일은 이 폴더 안에 저장!
+    \end{itemize}
+  \end{block}
+
+  \begin{block}{환경 갖추기: VS code Extensions 설치하기}
+    \begin{itemize}
+      \item VS code 왼쪽 메뉴의 `Extensions' 아이콘 클릭
+      \item "python" (Microsoft) 검색 후 install
+      \item "Jupyter" (Microsoft) 검색 후 install
+    \end{itemize}    
+  \end{block}
+\end{frame}
+
+\begin{frame}[t, fragile]{환경 갖추기: 첫 코드 실행}
+  \begin{block}{환경 갖추기: 파이썬 인터프리터 선택해보기}
+    \begin{itemize}
+      \item 새 파일 > Jupyter Notebook 선택
+      \item 새로 열린 파일의 첫 번째 셀에 아래 코드와 같이 입력하고 왼쪽의 실행 버튼 클릭
+      \item 커널을 선택하라고 뜨면 목록에서 `philology (Python 3.13.5)' 선택
+        \begin{itemize}
+          \item (커널 목록에 뜨지 않으면 VS Code를 재시작)
+        \end{itemize}
+      \item VS code 오른쪽 상단에 버전이 표시되면 성공!
+    \end{itemize}
+  \end{block}
+  \begin{minted}{py}
+print("Hello, world!")
+  \end{minted}    
+\end{frame}
+
+% \begin{frame}[t]{환경 갖추기}
+%   \begin{block}{ipykernel 설치하기}
+%     \begin{itemize}
+%       \item 'Running cells with Python 3.13.6 requires the ipykernel package.' 알림이 뜨면 install 선택
+%       \item 설치가 완료되면 다시 셀의 실행 버튼 클릭
+%       \item "Hello, World!"가 출력되면 환경 완성!
+%     \end{itemize}
+%   \end{block}
+
+% \end{frame}
+
+% \section{실습 2}
+
+% \begin{frame}[t]{실습 파일 열기}
+%   \begin{block}{eTL에서 실습 파일 내려받기}
+%     \begin{itemize}
+%       \item data.zip
+%       \item week1\_open\_files.ipynb
+%     \end{itemize}
+%   \end{block}
+% \end{frame}
+\end{document}
