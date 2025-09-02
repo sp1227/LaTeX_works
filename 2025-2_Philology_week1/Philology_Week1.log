@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.8.10)  29 AUG 2025 14:10
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.8.10)  1 SEP 2025 15:10
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/sp/Documents/2025-2_Philology_slides/slides/Week1/Philology_Week1
-(/Users/sp/Documents/2025-2_Philology_slides/slides/Week1/Philology_Week1.tex
+**/Users/sp/Documents/GitHub/LaTeX_works/2025-2_Philology_week1/Philology_Week1
+(/Users/sp/Documents/GitHub/LaTeX_works/2025-2_Philology_week1/Philology_Week1.tex
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-07-20>
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/beamer/beamer.cls
@@ -1471,10 +1471,10 @@ LaTeX Font Info:    Font shape `TU/LatinModernMath(3)/m/n' will be
 \pydata@fh@0=\write7
 \openout7 = `_38859EE2C5BE20ADF71AAF95278C8D64.data.minted'.
 
-runsystem(latexminted config  --timestamp 20250829141011 38859EE2C5BE20ADF71AAF95278C8D64)...executed.
+runsystem(latexminted config  --timestamp 20250901151009 38859EE2C5BE20ADF71AAF95278C8D64)...executed.
 
  (./_38859EE2C5BE20ADF71AAF95278C8D64.config.minted)
-runsystem(latexminted cleanconfig  --timestamp 20250829141011 38859EE2C5BE20ADF71AAF95278C8D64)...executed.
+runsystem(latexminted cleanconfig  --timestamp 20250901151009 38859EE2C5BE20ADF71AAF95278C8D64)...executed.
 
  (./_minted/default.style.minted) (./_minted/D90850F4C2865BF2D739FE8DAF38F5CE.highlight.minted))
 
@@ -1490,7 +1490,7 @@ runsystem(latexminted cleanconfig  --timestamp 20250829141011 38859EE2C5BE20ADF7
 ]
 \openout4 = `Philology_Week1.vrb'.
 
- (./Philology_Week1.vrb (./_minted/652400403975BCD0C1F0182BC1077D3D.highlight.minted) (./_minted/95B309642880CB9554FF566F91E4AA40.highlight.minted) (./_minted/8C0CFCE6F4CAD167139B6507D5816A23.highlight.minted))
+ (./Philology_Week1.vrb (./_minted/8F40724F86947DC96802FDC9FEB6F301.highlight.minted) (./_minted/95B309642880CB9554FF566F91E4AA40.highlight.minted) (./_minted/8C0CFCE6F4CAD167139B6507D5816A23.highlight.minted))
 
 [40
 
@@ -1529,11 +1529,11 @@ Package rerunfilecheck Info: File `Philology_Week1.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  33158 strings out of 469976
- 727460 string characters out of 5478429
+ 727475 string characters out of 5478429
  1311406 words of memory out of 5000000
  60892 multiletter control sequences out of 15000+600000
  633151 words of font info for 132 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 101i,12n,107p,510b,1104s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 101i,12n,107p,515b,1104s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on Philology_Week1.pdf (43 pages).

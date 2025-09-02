@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.8.10)  29 AUG 2025 18:41
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.8.10)  31 AUG 2025 17:58
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/sp/Documents/2025-2_Understanding_Linguistics_slides/2025-2_Understanding_Linguistics_week1
-(/Users/sp/Documents/2025-2_Understanding_Linguistics_slides/2025-2_Understanding_Linguistics_week1.tex
+**/Users/sp/Documents/GitHub/LaTeX_works/2025-2_Understanding_Linguistics_week1/2025-2_Understanding_Linguistics_week1
+(/Users/sp/Documents/GitHub/LaTeX_works/2025-2_Understanding_Linguistics_week1/2025-2_Understanding_Linguistics_week1.tex
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-07-20>
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/beamer/beamer.cls
@@ -1361,12 +1361,12 @@ Overfull \vbox (83.35696pt too high) detected at line 141
 [10
 
 ]
-LaTeX Font Info:    Trying to load font information for T3+NotoSansKR(0) on input line 228.
-LaTeX Font Info:    No file T3NotoSansKR(0).fd. on input line 228.
+LaTeX Font Info:    Trying to load font information for T3+NotoSansKR(0) on input line 226.
+LaTeX Font Info:    No file T3NotoSansKR(0).fd. on input line 226.
 
 
 LaTeX Font Warning: Font shape `T3/NotoSansKR(0)/m/n' undefined
-(Font)              using `T3/cmr/m/n' instead on input line 228.
+(Font)              using `T3/cmr/m/n' instead on input line 226.
 
 
 
@@ -1375,6 +1375,78 @@ LaTeX Font Warning: Font shape `T3/NotoSansKR(0)/m/n' undefined
 ]
 
 [12
+
+]
+
+[13
+
+]
+
+[14
+
+]
+
+[15
+
+]
+File: img/fe0733eb-8981-441d-9323-a9c635347ab8-2060x1236.jpg Graphic file (type bmp)
+<img/fe0733eb-8981-441d-9323-a9c635347ab8-2060x1236.jpg>
+
+Overfull \vbox (17.06816pt too high) detected at line 294
+ []
+
+
+
+[16
+
+]
+
+[17
+
+]
+File: img/K812933112_f.jpg Graphic file (type bmp)
+<img/K812933112_f.jpg>
+File: img/K812933112_b.jpg Graphic file (type bmp)
+<img/K812933112_b.jpg>
+
+Overfull \vbox (113.79668pt too high) detected at line 315
+ []
+
+
+
+[18
+
+]
+File: img/550304175_fbcaca2d23_b.jpg Graphic file (type bmp)
+<img/550304175_fbcaca2d23_b.jpg>
+
+Overfull \vbox (14.28279pt too high) detected at line 321
+ []
+
+
+
+[19
+
+]
+
+[20
+
+]
+
+[21
+
+]
+File: img/8946065338_1.jpg Graphic file (type bmp)
+<img/8946065338_1.jpg>
+File: img/k962831307_1.jpg Graphic file (type bmp)
+<img/k962831307_1.jpg>
+File: img/k432832329_2.jpg Graphic file (type bmp)
+<img/k432832329_2.jpg>
+File: img/k172938313_1.jpg Graphic file (type bmp)
+<img/k172938313_1.jpg>
+
+
+[22
 
 ]
 \tf@nav=\write7
@@ -1386,7 +1458,7 @@ LaTeX Font Warning: Font shape `T3/NotoSansKR(0)/m/n' undefined
 \tf@snm=\write9
 \openout9 = `2025-2_Understanding_Linguistics_week1.snm'.
 
-runsystem(latexminted cleantemp  --timestamp 20250829184120 B9C6B8E5F9D2162EF219D895A44260DE)...executed.
+runsystem(latexminted cleantemp  --timestamp 20250831175818 B9C6B8E5F9D2162EF219D895A44260DE)...executed.
 
  (./2025-2_Understanding_Linguistics_week1.aux)
  ***********
@@ -1398,15 +1470,15 @@ L3 programming layer <2022/08/05>
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `2025-2_Understanding_Linguistics_week1.out' has not changed.
-(rerunfilecheck)             Checksum: CC665E6917AA897C1A0468F079EED3C9;190.
+(rerunfilecheck)             Checksum: B9B5CCEFC0895FC0AED705AD8A30303A;313.
  ) 
 Here is how much of TeX's memory you used:
- 33393 strings out of 469976
- 724793 string characters out of 5478429
- 1317214 words of memory out of 5000000
- 61148 multiletter control sequences out of 15000+600000
+ 33474 strings out of 469976
+ 726738 string characters out of 5478429
+ 1316743 words of memory out of 5000000
+ 61221 multiletter control sequences out of 15000+600000
  633535 words of font info for 124 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 101i,12n,107p,557b,681s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 101i,11n,107p,575b,681s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on 2025-2_Understanding_Linguistics_week1.pdf (12 pages).
+Output written on 2025-2_Understanding_Linguistics_week1.pdf (22 pages).

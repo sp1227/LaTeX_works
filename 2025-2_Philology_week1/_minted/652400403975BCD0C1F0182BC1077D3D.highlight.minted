@@ -1,3 +1,0 @@
-\begin{MintedVerbatim}[commandchars=\\\{\}]
-conda\PYG{+w}{ }create\PYG{+w}{ }\PYGZhy{}n\PYG{+w}{ }philology\PYG{+w}{ }\PYG{n+nv}{python}\PYG{o}{=}\PYG{l+m}{3}.13\PYG{+w}{ }\PYGZhy{}y
-\end{MintedVerbatim}
