@@ -1,0 +1,502 @@
+\documentclass[aspectratio=169]{beamer}
+\usepackage{kotex}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage{emoji}
+
+% 테마 설정
+\usetheme{Madrid}
+\usecolortheme{whale}
+
+% 제목 정보
+\title{언어의 이해}
+\subtitle{1강. 언어와 언어학}
+\author{김미경}
+\date{}
+
+\begin{document}
+
+% 제목 슬라이드
+\frame{\titlepage}
+
+% 목차
+\begin{frame}{목차}
+\tableofcontents
+\end{frame}
+
+\section{언어, 언어학, 언어학자}
+
+\begin{frame}{언어의 두 가지 의미}
+\begin{itemize}
+\item \textbf{구체적, 개별적 '언어'}
+    \begin{itemize}
+    \item 한국어, 영어, 중국어, 일본어, 프랑스어 등
+    \item 특정 언어 공동체가 사용하는 개별 언어
+    \end{itemize}
+\vspace{0.5cm}
+\item \textbf{추상적 '언어'}
+    \begin{itemize}
+    \item 말을 이해하고 말로 표현하는 능력
+    \item 인간의 보편적 의사소통 능력
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{언어학과 언어학자}
+\begin{block}{언어학이란?}
+구체적, 개별적 '언어'를 연구해서 추상적 '언어'를 탐구하는 학문
+\end{block}
+
+\vspace{0.5cm}
+
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\textbf{언어학자는?}
+\begin{itemize}
+\item[\checkmark] 언어를 연구하는 사람
+\item[\texttimes] 여러 언어를 구사하는 사람
+\end{itemize}
+\end{column}
+\begin{column}{0.5\textwidth}
+\begin{alertblock}{주의}
+언어학자 ≠ 다언어 구사자
+\end{alertblock}
+\end{column}
+\end{columns}
+\end{frame}
+
+\section{언어를 연구하는 이유}
+
+\begin{frame}{언어 연구의 동기}
+\begin{enumerate}
+\item \textbf{의사소통}
+    \begin{itemize}
+    \item 타자와 의사소통하기 위해서 → 개별어학
+    \end{itemize}
+\vspace{0.3cm}
+\item \textbf{비교와 대조}
+    \begin{itemize}
+    \item 언어 간 차이와 관계 탐구 → 비교/대조 언어학
+    \end{itemize}
+\vspace{0.3cm}
+\item \textbf{인간 고유성 탐구}
+    \begin{itemize}
+    \item 인간만의 특이성 연구 → 이론언어학
+    \end{itemize}
+\end{enumerate}
+\end{frame}
+
+\section{언어학의 핵심 아이디어}
+
+\begin{frame}{언어학의 토대 (1/3)}
+\begin{itemize}
+\item 언어는 혼란스러워 보이지만 \textbf{체계}가 있음
+\item 이 체계는 \textbf{과학적으로 탐구} 가능
+\item 언어 지식은 여러 \textbf{층위}로 구성됨
+\item 각 층위마다 요소와 체계가 존재
+\end{itemize}
+\end{frame}
+
+\begin{frame}{언어학의 토대 (2/3)}
+\begin{itemize}
+\item 화자들은 \textbf{무한한 표현} 생성 가능
+\item 언어는 \textbf{변이}를 가짐
+    \begin{itemize}
+    \item 사람별, 지역별, 상황별 차이
+    \end{itemize}
+\item 다양한 언어 체계가 존재하지만 \textbf{보편성}도 존재
+\end{itemize}
+\end{frame}
+
+\begin{frame}{언어학의 토대 (3/3)}
+\begin{itemize}
+\item 언어 요소의 \textbf{자의성}
+\item 화자들은 규칙을 따르지만 \textbf{의식하지 못함}
+\item 언어 습득은 \textbf{타고난 능력}에 기반
+\item 언어는 시간에 따라 \textbf{변화}
+    \begin{itemize}
+    \item 화자의 의지와 무관하게 일어남
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+\section{언어 지식의 구조}
+
+\begin{frame}{언어 능력과 언어 수행}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\textbf{언어 능력}\\
+(Linguistic Competence)
+\begin{itemize}
+\item 숨겨진 지식
+\item 적절한 표현을 만들어내는 능력
+\item 설명할 수 없지만 존재
+\end{itemize}
+\end{column}
+\begin{column}{0.5\textwidth}
+\textbf{언어 수행}\\
+(Linguistic Performance)
+\begin{itemize}
+\item 실제 언어 사용
+\item 언어 능력의 실현
+\item 관찰 가능한 행위
+\end{itemize}
+\end{column}
+\end{columns}
+
+\vspace{0.5cm}
+\begin{block}{핵심}
+언어 수행은 언어 능력을 연구하기 위한 단서
+\end{block}
+\end{frame}
+
+\begin{frame}{의사소통의 단계}
+\begin{center}
+\begin{tikzpicture}[scale=0.8, transform shape]
+\node[draw, rounded corners] (1) at (0,0) {정보 구상};
+\node[draw, rounded corners] (2) at (0,-1.5) {단어 선택};
+\node[draw, rounded corners] (3) at (0,-3) {단어 배치};
+\node[draw, rounded corners] (4) at (0,-4.5) {발음 계획};
+\node[draw, rounded corners] (5) at (5,0) {음성 실현};
+\node[draw, rounded corners] (6) at (5,-1.5) {청각 수신};
+\node[draw, rounded corners] (7) at (5,-3) {정보 변환};
+\node[draw, rounded corners] (8) at (5,-4.5) {정보 이해};
+
+\draw[->] (1) -- (2);
+\draw[->] (2) -- (3);
+\draw[->] (3) -- (4);
+\draw[->] (4) -| (2.5,-5) |- (5);
+\draw[->] (5) -- (6);
+\draw[->] (6) -- (7);
+\draw[->] (7) -- (8);
+
+\node at (2.5,0.5) {\textbf{화자}};
+\node at (2.5,-5.5) {\textbf{청자}};
+\end{tikzpicture}
+\end{center}
+\end{frame}
+
+\section{언어학의 하위 분야}
+
+\begin{frame}{언어학의 하위 분야 (1/2)}
+\begin{description}
+\item[음성학 (Phonetics)] 
+    \begin{itemize}
+    \item 말소리의 물리적 특성 연구
+    \item 발음과 청취 메커니즘
+    \end{itemize}
+\item[음운론 (Phonology)]
+    \begin{itemize}
+    \item 말소리의 체계와 패턴
+    \item 가능한/불가능한 발음 연속
+    \end{itemize}
+\item[형태론 (Morphology)]
+    \begin{itemize}
+    \item 단어의 내부 구조
+    \item 형태소와 단어 형성 규칙
+    \end{itemize}
+\end{description}
+\end{frame}
+
+\begin{frame}{언어학의 하위 분야 (2/2)}
+\begin{description}
+\item[통사론 (Syntax)]
+    \begin{itemize}
+    \item 문장의 구조와 어순
+    \item 문법적 관계와 규칙
+    \end{itemize}
+\item[의미론 (Semantics)]
+    \begin{itemize}
+    \item 언어 표현의 의미
+    \item 단어와 문장의 의미 관계
+    \end{itemize}
+\item[화용론 (Pragmatics)]
+    \begin{itemize}
+    \item 맥락 속의 언어 사용
+    \item 함축과 화행
+    \end{itemize}
+\end{description}
+\end{frame}
+
+\begin{frame}{언어 지식의 구성 요소}
+\begin{center}
+\begin{tikzpicture}
+\draw[thick, fill=blue!20] (0,0) circle (2cm);
+\draw[thick, fill=green!20] (3,0) circle (2cm);
+
+\node[align=center] at (0,0) {\textbf{어휘부}\\(Lexicon)};
+\node[align=center] at (3,0) {\textbf{규칙}\\(Rules)};
+
+\draw[<->, thick] (0,-2.5) -- (3,-2.5);
+\node at (1.5,-3) {\textbf{문법 (Grammar)}};
+
+\node[align=left] at (0,-4) {\small 언어 단위들에\\대한 지식};
+\node[align=left] at (3,-4) {\small 결합 패턴에\\대한 지식};
+\end{tikzpicture}
+\end{center}
+\end{frame}
+
+\section{언어와 관련된 지식}
+
+\begin{frame}{쓰기 (Writing)}
+\begin{columns}
+\begin{column}{0.6\textwidth}
+\textbf{특징}
+\begin{itemize}
+\item 소리 외 물리적 매체 사용
+\item 의도적 학습 필요
+\item 모든 언어가 문자를 갖지는 않음
+\item 수정 가능
+\end{itemize}
+\end{column}
+\begin{column}{0.4\textwidth}
+\begin{alertblock}{참고}
+약 7,000개 언어 중\\
+3,000개는 문자 없음\\
+(2019년 기준)
+\end{alertblock}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{규범 문법 vs 기술 문법}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\textbf{규범 문법}\\
+(Prescriptive Grammar)
+\begin{itemize}
+\item 사회적으로 규정된 '올바른' 방법
+\item 가치평가적
+\item 고정적
+\item 예: "십상"(O) vs "쉽상"(X)
+\end{itemize}
+\end{column}
+\begin{column}{0.5\textwidth}
+\textbf{기술 문법}\\
+(Descriptive Grammar)
+\begin{itemize}
+\item 실제 사용 패턴 기술
+\item 객관적 관찰
+\item 변화 반영
+\item 예: "일부 화자는 '쉽상'이라 말함"
+\end{itemize}
+\end{column}
+\end{columns}
+\end{frame}
+
+\section{언어의 특징}
+
+\begin{frame}{Hockett의 언어 특징 (1/3)}
+\begin{enumerate}
+\item \textbf{의사소통의 수단}
+\item \textbf{의미성 (Semanticity)}
+    \begin{itemize}
+    \item 언어 요소가 의미/기능을 지님
+    \end{itemize}
+\item \textbf{기능성 (Pragmatic Function)}
+    \begin{itemize}
+    \item 타인의 행동과 관계에 영향
+    \end{itemize}
+\item \textbf{교환성 (Interchangeability)}
+    \begin{itemize}
+    \item 발신과 수신 모두 가능
+    \end{itemize}
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Hockett의 언어 특징 (2/3)}
+\begin{enumerate}
+\setcounter{enumi}{4}
+\item \textbf{문화적 전달 (Cultural Transmission)}
+    \begin{itemize}
+    \item 접촉과 소통을 통한 습득
+    \end{itemize}
+\item \textbf{자의성 (Arbitrariness)}
+    \begin{itemize}
+    \item 형식과 의미의 관계가 관습적
+    \end{itemize}
+\item \textbf{분할성 (Discreteness)}
+    \begin{itemize}
+    \item 연속적 소리를 분절된 단위로 인식
+    \end{itemize}
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Hockett의 언어 특징 (3/3)}
+\begin{enumerate}
+\setcounter{enumi}{7}
+\item \textbf{전위성 (Displacement)}
+    \begin{itemize}
+    \item '지금', '여기'가 아닌 것을 다룸
+    \item 존재하지 않는 대상도 가능
+    \end{itemize}
+\item \textbf{생산성 (Productivity)}
+    \begin{itemize}
+    \item 새로운 메시지 생성
+    \item 무한한 표현 가능
+    \end{itemize}
+\end{enumerate}
+
+\vspace{0.5cm}
+\begin{block}{핵심}
+이 9가지 특징이 자연언어를 정의함
+\end{block}
+\end{frame}
+
+\begin{frame}{언어의 자의성}
+\begin{center}
+\begin{tikzpicture}
+% 개 그림 (간단한 표현)
+\draw[thick] (0,0) circle (0.5cm);
+\node at (0,0) {\LARGE\emoji{dog}};
+
+% 각 언어의 표현
+\node at (-2,-1.5) {한국어: 개};
+\node at (2,-1.5) {영어: dog};
+\node at (-2,-2.5) {일본어: 犬 (inu)};
+\node at (2,-2.5) {프랑스어: chien};
+
+% 화살표
+\draw[->] (-0.5,-0.5) -- (-1.5,-1.2);
+\draw[->] (0.5,-0.5) -- (1.5,-1.2);
+\draw[->] (-0.5,-0.5) -- (-1.5,-2.2);
+\draw[->] (0.5,-0.5) -- (1.5,-2.2);
+\end{tikzpicture}
+\end{center}
+
+\begin{alertblock}{자의성의 의미}
+형식(form)과 의미(meaning)는 무관하며, 관행으로 연결됨
+\end{alertblock}
+\end{frame}
+
+\section{언어 연구의 역사}
+
+\begin{frame}{언어 연구의 역사적 발전}
+\begin{itemize}
+\item \textbf{고대 그리스}
+    \begin{itemize}
+    \item 철학의 일부로서 언어 고찰
+    \item 플라톤, 아리스토텔레스
+    \end{itemize}
+\item \textbf{중세 유럽}
+    \begin{itemize}
+    \item 내성문법, 보편문법 탐구
+    \end{itemize}
+\item \textbf{19세기}
+    \begin{itemize}
+    \item 역사비교언어학 발달
+    \item 인도유럽어족 연구
+    \end{itemize}
+\item \textbf{20세기}
+    \begin{itemize}
+    \item 구조주의 (소쉬르)
+    \item 생성문법 (촘스키)
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{소쉬르의 구조주의}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\textbf{랑그 (Langue)}
+\begin{itemize}
+\item 사회적 실체
+\item 공동체가 공유하는 언어
+\item 언어학의 연구 대상
+\end{itemize}
+\end{column}
+\begin{column}{0.5\textwidth}
+\textbf{파롤 (Parole)}
+\begin{itemize}
+\item 개인적 수행
+\item 개인이 사용하는 언어
+\item 랑그 연구의 자료
+\end{itemize}
+\end{column}
+\end{columns}
+
+\vspace{0.5cm}
+\begin{block}{핵심 개념}
+\begin{itemize}
+\item 계열관계와 통합관계
+\item 공시적 연구 vs 통시적 연구
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{촘스키의 생성문법}
+\begin{center}
+\begin{tikzpicture}[scale=0.9, transform shape]
+\node[draw, rounded corners, fill=yellow!20] (ability) at (0,2) {언어 능력};
+\node[draw, rounded corners, fill=blue!20] (performance) at (0,0) {언어 수행};
+\node[draw, rounded corners, fill=green!20] (cognition) at (4,1) {인지 구조};
+
+\draw[->] (ability) -- (performance);
+\draw[<->] (ability) -- (cognition);
+
+\node[align=center] at (0,-1.5) {\small 관찰 가능한\\발화들};
+\node[align=center] at (0,3.5) {\small 문법 구조\\생성 능력};
+\node[align=center] at (4,2.5) {\small 인간의\\마음 속};
+\end{tikzpicture}
+\end{center}
+
+\begin{block}{핵심 주장}
+언어학의 연구 대상은 언어 능력이며,\\
+이는 인간의 인지 구조의 일부
+\end{block}
+\end{frame}
+
+\begin{frame}{21세기 언어학}
+\begin{itemize}
+\item \textbf{다양한 이론틀의 공존}
+    \begin{itemize}
+    \item 생성문법
+    \item 인지언어학
+    \item 사용 기반 이론
+    \end{itemize}
+\vspace{0.3cm}
+\item \textbf{기술 발전의 활용}
+    \begin{itemize}
+    \item 대량 언어 자원 연구
+    \item 컴퓨터 기반 분석
+    \item 실험 언어학
+    \end{itemize}
+\vspace{0.3cm}
+\item \textbf{학제간 연구}
+    \begin{itemize}
+    \item 신경언어학
+    \item 전산언어학
+    \item 심리언어학
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+\section{마무리}
+
+\begin{frame}{핵심 정리}
+\begin{itemize}
+\item 언어학은 개별 언어를 통해 보편적 언어 능력을 탐구
+\item 언어는 체계적이고 과학적으로 연구 가능
+\item 언어 지식은 여러 층위로 구성 (음성, 음운, 형태, 통사, 의미, 화용)
+\item 언어 능력과 언어 수행의 구분이 중요
+\item 언어는 자의적이지만 체계적
+\item 언어학은 계속 발전하는 학문
+\end{itemize}
+\end{frame}
+
+\begin{frame}{참고문헌}
+\begin{itemize}
+\item Department of Linguistics, The Ohio State University (2022) \textit{Language Files}, 13th ed. Ohio State University Press. Chapter 1.
+\item Robins, R. H. (1997) \textit{A Short History of Linguistics}, 4th ed. London and New York: Longman
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{center}
+\Huge{감사합니다}
+\end{center}
+\end{frame}
+
+\end{document}

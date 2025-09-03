@@ -1,0 +1,6 @@
+\beamer@sectionintoc {1}{언어, 언어학, 언어학자}{3}{0}{1}
+\beamer@sectionintoc {2}{언어 지식의 구조}{9}{0}{2}
+\beamer@sectionintoc {3}{언어와 관련된 다른 지식}{21}{0}{3}
+\beamer@sectionintoc {4}{언어의 특징}{25}{0}{4}
+\beamer@sectionintoc {5}{언어 연구의 역사}{38}{0}{5}
+\beamer@sectionintoc {6}{마무리}{48}{0}{6}
