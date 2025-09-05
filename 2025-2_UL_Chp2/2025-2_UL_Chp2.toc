@@ -1,3 +1,6 @@
 \beamer@sectionintoc {1}{말소리}{3}{0}{1}
 \beamer@sectionintoc {2}{음성학}{11}{0}{2}
 \beamer@sectionintoc {3}{발음 기관}{15}{0}{3}
+\beamer@subsectionintoc {3}{1}{발동부}{17}{0}{3}
+\beamer@subsectionintoc {3}{2}{발성부}{20}{0}{3}
+\beamer@subsectionintoc {3}{3}{조음부}{23}{0}{3}
