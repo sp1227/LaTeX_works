@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.22.0 (TeX Live 2025)  (format=lualatex 2025.8.10)  5 SEP 2025 17:22
+This is LuaHBTeX, Version 1.22.0 (TeX Live 2025)  (format=lualatex 2025.8.10)  7 SEP 2025 10:57
  system commands enabled.
  file:line:error style messages enabled.
 **/Users/sp/Documents/GitHub/LaTeX_works/2025-2_UL_Chp2/2025-2_UL_Chp2
@@ -1485,7 +1485,7 @@ Package fontspec Info:
 
 [6
 
-<./luatex.xmYInA/1.png><./luatex.xmYInA/2.png>]
+<./luatex.C49zRR/1.png><./luatex.C49zRR/2.png>]
 
 [7
 
@@ -1493,11 +1493,11 @@ Package fontspec Info:
 
 [8
 
-<./luatex.xmYInA/3.png><./luatex.xmYInA/4.png>]
+<./luatex.C49zRR/3.png><./luatex.C49zRR/4.png>]
 
 [9
 
-<./luatex.xmYInA/5.png>]
+<./luatex.C49zRR/5.png>]
 Overfull \vbox (2.54262pt too high) detected at line 273
  []
 
@@ -1513,7 +1513,7 @@ Overfull \vbox (2.54262pt too high) detected at line 273
 
 [12
 
-<./luatex.xmYInA/6.png>]
+<./luatex.C49zRR/6.png>]
 <img/Spectrogram-19thC.png, id=144, 646.415pt x 336.25626pt>
 File: img/Spectrogram-19thC.png Graphic file (type png)
 <use img/Spectrogram-19thC.png>
@@ -1560,7 +1560,7 @@ Overfull \hbox (1.49107pt too wide) in paragraph at lines 355--355
 
 [18
 
-<./luatex.xmYInA/7.png>]
+<./luatex.C49zRR/7.png>]
 
 [19
 
@@ -1603,38 +1603,49 @@ Overfull \vbox (1.23984pt too high) detected at line 480
 [23
 
 ]
+<img/Cardinal_vowel_tongue_position-front.svg.png, id=218, 642.4pt x 642.4pt>
+File: img/Cardinal_vowel_tongue_position-front.svg.png Graphic file (type png)
+<use img/Cardinal_vowel_tongue_position-front.svg.png>
+Package luatex.def Info: img/Cardinal_vowel_tongue_position-front.svg.png  used on input line 508.
+(luatex.def)             Requested size: 159.333pt x 159.32532pt.
+<img/Cardinal_vowel_tongue_position-back.svg.png, id=219, 642.4pt x 638.385pt>
+File: img/Cardinal_vowel_tongue_position-back.svg.png Graphic file (type png)
+<use img/Cardinal_vowel_tongue_position-back.svg.png>
+Package luatex.def Info: img/Cardinal_vowel_tongue_position-back.svg.png  used on input line 508.
+(luatex.def)             Requested size: 159.333pt x 158.32953pt.
+
+Overfull \vbox (6.4819pt too high) detected at line 508
+ []
+
+
 
 [24
 
-]
-<img/Saggital.png, id=225, 798.985pt x 784.9325pt>
-File: img/Saggital.png Graphic file (type png)
-<use img/Saggital.png>
-Package luatex.def Info: img/Saggital.png  used on input line 528.
-(luatex.def)             Requested size: 250.64532pt x 246.2428pt.
-
-Overfull \hbox (11.63974pt too wide) in paragraph at lines 528--528
- [][] 
- []
-
-
-Overfull \vbox (40.91557pt too high) detected at line 528
- []
-
-
+<./img/Cardinal_vowel_tongue_position-front.svg.png><./img/Cardinal_vowel_tongue_position-back.svg.png>]
 
 [25
 
-<./img/Saggital.png>]
-Overfull \vbox (1.76707pt too high) detected at line 549
+]
+<img/ipa2020_vowel_chart.png, id=233, 709.65125pt x 541.02126pt>
+File: img/ipa2020_vowel_chart.png Graphic file (type png)
+<use img/ipa2020_vowel_chart.png>
+Package luatex.def Info: img/ipa2020_vowel_chart.png  used on input line 541.
+(luatex.def)             Requested size: 187.21962pt x 142.72603pt.
+<img/Vowel-chart-mouth.jpg, id=234, 123.22035pt x 114.4275pt>
+File: img/Vowel-chart-mouth.jpg Graphic file (type jpg)
+<use img/Vowel-chart-mouth.jpg>
+Package luatex.def Info: img/Vowel-chart-mouth.jpg  used on input line 541.
+(luatex.def)             Requested size: 187.21962pt x 173.86pt.
+
+Overfull \vbox (38.4316pt too high) detected at line 541
  []
 
 
 
 [26
 
-]
-Overfull \vbox (2.17508pt too high) detected at line 570
+<./img/ipa2020_vowel_chart.png><./img/Vowel-chart-mouth.jpg>]
+Overfull \vbox (7.07085pt too high) detected at line 576
  []
 
 
@@ -1642,47 +1653,49 @@ Overfull \vbox (2.17508pt too high) detected at line 570
 [27
 
 ]
-Overfull \vbox (1.91109pt too high) detected at line 591
- []
-
-
 
 [28
 
 ]
+<img/Saggital.png, id=253, 798.985pt x 784.9325pt>
+File: img/Saggital.png Graphic file (type png)
+<use img/Saggital.png>
+Package luatex.def Info: img/Saggital.png  used on input line 604.
+(luatex.def)             Requested size: 250.64532pt x 246.2428pt.
+
+Overfull \hbox (11.63974pt too wide) in paragraph at lines 604--604
+ [][] 
+ []
+
+
+Overfull \vbox (40.91557pt too high) detected at line 604
+ []
+
+
 
 [29
 
-]
-<img/Voiceless_palatal_plosive.svg.png, id=252, 642.4pt x 680.5425pt>
-File: img/Voiceless_palatal_plosive.svg.png Graphic file (type png)
-<use img/Voiceless_palatal_plosive.svg.png>
-Package luatex.def Info: img/Voiceless_palatal_plosive.svg.png  used on input line 635.
-(luatex.def)             Requested size: 79.66649pt x 84.39262pt.
-<img/Voiceless_palatal_nasal.svg.png, id=253, 642.4pt x 680.5425pt>
-File: img/Voiceless_palatal_nasal.svg.png Graphic file (type png)
-<use img/Voiceless_palatal_nasal.svg.png>
-Package luatex.def Info: img/Voiceless_palatal_nasal.svg.png  used on input line 635.
-(luatex.def)             Requested size: 79.66649pt x 84.39262pt.
-<img/Voiceless_palatal_fricative_articulation.svg.png, id=254, 642.4pt x 680.5425pt>
-File: img/Voiceless_palatal_fricative_articulation.svg.png Graphic file (type png)
-<use img/Voiceless_palatal_fricative_articulation.svg.png>
-Package luatex.def Info: img/Voiceless_palatal_fricative_articulation.svg.png  used on input line 635.
-(luatex.def)             Requested size: 79.66649pt x 84.39262pt.
-<img/Voiced_palatal_approximant.svg.png, id=255, 642.4pt x 680.5425pt>
-File: img/Voiced_palatal_approximant.svg.png Graphic file (type png)
-<use img/Voiced_palatal_approximant.svg.png>
-Package luatex.def Info: img/Voiced_palatal_approximant.svg.png  used on input line 635.
-(luatex.def)             Requested size: 79.66649pt x 84.39262pt.
+<./img/Saggital.png>]
+Overfull \vbox (1.76707pt too high) detected at line 625
+ []
+
 
 
 [30
 
-<./img/Voiceless_palatal_plosive.svg.png><./img/Voiceless_palatal_nasal.svg.png><./img/Voiceless_palatal_fricative_articulation.svg.png><./img/Voiced_palatal_approximant.svg.png>]
+]
+Overfull \vbox (2.17508pt too high) detected at line 646
+ []
+
+
 
 [31
 
 ]
+Overfull \vbox (1.91109pt too high) detected at line 667
+ []
+
+
 
 [32
 
@@ -1691,71 +1704,66 @@ Package luatex.def Info: img/Voiced_palatal_approximant.svg.png  used on input l
 [33
 
 ]
+<img/Voiceless_palatal_plosive.svg.png, id=281, 642.4pt x 680.5425pt>
+File: img/Voiceless_palatal_plosive.svg.png Graphic file (type png)
+<use img/Voiceless_palatal_plosive.svg.png>
+Package luatex.def Info: img/Voiceless_palatal_plosive.svg.png  used on input line 711.
+(luatex.def)             Requested size: 79.66649pt x 84.39262pt.
+<img/Voiceless_palatal_nasal.svg.png, id=282, 642.4pt x 680.5425pt>
+File: img/Voiceless_palatal_nasal.svg.png Graphic file (type png)
+<use img/Voiceless_palatal_nasal.svg.png>
+Package luatex.def Info: img/Voiceless_palatal_nasal.svg.png  used on input line 711.
+(luatex.def)             Requested size: 79.66649pt x 84.39262pt.
+<img/Voiceless_palatal_fricative_articulation.svg.png, id=283, 642.4pt x 680.5425pt>
+File: img/Voiceless_palatal_fricative_articulation.svg.png Graphic file (type png)
+<use img/Voiceless_palatal_fricative_articulation.svg.png>
+Package luatex.def Info: img/Voiceless_palatal_fricative_articulation.svg.png  used on input line 711.
+(luatex.def)             Requested size: 79.66649pt x 84.39262pt.
+<img/Voiced_palatal_approximant.svg.png, id=284, 642.4pt x 680.5425pt>
+File: img/Voiced_palatal_approximant.svg.png Graphic file (type png)
+<use img/Voiced_palatal_approximant.svg.png>
+Package luatex.def Info: img/Voiced_palatal_approximant.svg.png  used on input line 711.
+(luatex.def)             Requested size: 79.66649pt x 84.39262pt.
+
 
 [34
 
-]
+<./img/Voiceless_palatal_plosive.svg.png><./img/Voiceless_palatal_nasal.svg.png><./img/Voiceless_palatal_fricative_articulation.svg.png><./img/Voiced_palatal_approximant.svg.png>]
 
 [35
 
 ]
-<img/Cardinal_vowel_tongue_position-front.svg.png, id=291, 642.4pt x 642.4pt>
-File: img/Cardinal_vowel_tongue_position-front.svg.png Graphic file (type png)
-<use img/Cardinal_vowel_tongue_position-front.svg.png>
-Package luatex.def Info: img/Cardinal_vowel_tongue_position-front.svg.png  used on input line 726.
-(luatex.def)             Requested size: 159.333pt x 159.32532pt.
-<img/Cardinal_vowel_tongue_position-back.svg.png, id=292, 642.4pt x 638.385pt>
-File: img/Cardinal_vowel_tongue_position-back.svg.png Graphic file (type png)
-<use img/Cardinal_vowel_tongue_position-back.svg.png>
-Package luatex.def Info: img/Cardinal_vowel_tongue_position-back.svg.png  used on input line 726.
-(luatex.def)             Requested size: 159.333pt x 158.32953pt.
-
-Overfull \vbox (6.4819pt too high) detected at line 726
- []
-
-
 
 [36
 
-<./img/Cardinal_vowel_tongue_position-front.svg.png><./img/Cardinal_vowel_tongue_position-back.svg.png>]
+]
 
 [37
 
 ]
-<img/ipa2020_vowel_chart.png, id=307, 709.65125pt x 541.02126pt>
-File: img/ipa2020_vowel_chart.png Graphic file (type png)
-<use img/ipa2020_vowel_chart.png>
-Package luatex.def Info: img/ipa2020_vowel_chart.png  used on input line 759.
-(luatex.def)             Requested size: 187.21962pt x 142.72603pt.
-<img/Vowel-chart-mouth.jpg, id=308, 123.22035pt x 114.4275pt>
-File: img/Vowel-chart-mouth.jpg Graphic file (type jpg)
-<use img/Vowel-chart-mouth.jpg>
-Package luatex.def Info: img/Vowel-chart-mouth.jpg  used on input line 759.
-(luatex.def)             Requested size: 187.21962pt x 173.86pt.
-
-Overfull \vbox (38.4316pt too high) detected at line 759
- []
-
-
 
 [38
 
-<./img/ipa2020_vowel_chart.png><./img/Vowel-chart-mouth.jpg>]
-Overfull \vbox (7.07085pt too high) detected at line 794
- []
-
-
+]
 
 [39
 
 ]
 
-LaTeX Font Warning: Font shape `TU/NotoSerifKR(0)/m/it' undefined
-(Font)              using `TU/NotoSerifKR(0)/m/n' instead on input line 802.
-
-
-
 [40
+
+]
+
+[41
+
+]
+
+LaTeX Font Warning: Font shape `TU/NotoSerifKR(0)/m/it' undefined
+(Font)              using `TU/NotoSerifKR(0)/m/n' instead on input line 836.
+
+
+
+[42
 
 ]
 \tf@nav=\write7
@@ -1767,7 +1775,7 @@ LaTeX Font Warning: Font shape `TU/NotoSerifKR(0)/m/it' undefined
 \tf@snm=\write9
 
 \openout9 = 2025-2_UL_Chp2.snm
-runsystem(latexminted cleantemp  --timestamp 20250905172220 9BC581962D8AA0FCE49F495DD6709557)...executed.
+runsystem(latexminted cleantemp  --timestamp 20250907105740 9BC581962D8AA0FCE49F495DD6709557)...executed.
  (./2025-2_UL_Chp2.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
@@ -1782,21 +1790,21 @@ Package rerunfilecheck Info: File `2025-2_UL_Chp2.out' has not changed.
 )
 
 Here is how much of LuaTeX's memory you used:
- 41445 strings out of 470118
+ 41456 strings out of 470118
  100000,1648299 words of node,token memory allocated
- 4703 words of node memory still in use:
-   31 hlist, 9 vlist, 5 rule, 10 disc, 4 local_par, 4 math, 95 glue, 10 kern, 32 penalty, 150 glyph, 630 attribute, 65 glue_spec, 248 attribute_list, 4 write, 3 user_defined, 26 pdf_colorstack nodes
-   avail lists: 2:2689,3:592,4:438,5:283,6:67,7:2159,8:2,9:532,10:36,11:65
- 68772 multiletter control sequences out of 65536+600000
- 132 fonts using 256315539 bytes
+ 4721 words of node memory still in use:
+   31 hlist, 9 vlist, 5 rule, 10 disc, 4 local_par, 4 math, 95 glue, 10 kern, 32 penalty, 150 glyph, 636 attribute, 65 glue_spec, 251 attribute_list, 4 write, 3 user_defined, 26 pdf_colorstack nodes
+   avail lists: 2:2680,3:592,4:438,5:281,6:67,7:2159,8:2,9:532,10:39,11:65
+ 68779 multiletter control sequences out of 65536+600000
+ 135 fonts using 261641963 bytes
  101i,13n,101p,526b,816s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </System/Library/Fonts/Supplemental/Times New Roman Italic.ttf></System/Library/Fonts/Supplemental/Times New Roman.ttf></Users/sp/Library/Fonts/NotoSerifKR-Bold.otf
 warning  (file /Users/sp/Library/Fonts/NotoSerifKR-Bold.otf) (cff): charset data possibly broken (too many glyphs)
 ></Users/sp/Library/Fonts/DoulosSIL-Regular.ttf></Users/sp/Library/Fonts/NotoSansKR-Bold.otf></System/Library/Fonts/Apple Color Emoji.ttc></Users/sp/Library/Fonts/latinmodern-math.otf></Users/sp/Library/Fonts/NotoSerifKR-Regular.otf></Users/sp/Library/Fonts/NotoSansKR-Regular.otf>
-Output written on 2025-2_UL_Chp2.pdf (40 pages, 1598707 bytes).
+Output written on 2025-2_UL_Chp2.pdf (42 pages, 1603023 bytes).
 
-PDF statistics: 390 PDF objects out of 1000 (max. 8388607)
- 271 compressed objects within 3 object streams
- 87 named destinations out of 1000 (max. 131072)
+PDF statistics: 401 PDF objects out of 1000 (max. 8388607)
+ 280 compressed objects within 3 object streams
+ 91 named destinations out of 1000 (max. 131072)
  64 words of extra memory for PDF output out of 10000 (max. 100000000)
 
