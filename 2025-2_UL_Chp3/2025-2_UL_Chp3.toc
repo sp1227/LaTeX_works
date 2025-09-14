@@ -1,0 +1,5 @@
+\beamer@sectionintoc {1}{개별 언어의 말소리 규칙}{3}{0}{1}
+\beamer@sectionintoc {2}{음성과 음운}{10}{0}{2}
+\beamer@sectionintoc {3}{음운 규칙}{24}{0}{3}
+\beamer@sectionintoc {4}{음소 체계의 보편적 경향}{39}{0}{4}
+\beamer@sectionintoc {5}{음소 분석}{45}{0}{5}
