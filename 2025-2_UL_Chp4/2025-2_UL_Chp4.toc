@@ -1,0 +1,5 @@
+\beamer@sectionintoc {1}{단어와 단어의 구조}{3}{0}{1}
+\beamer@sectionintoc {2}{형태론적 과정}{17}{0}{2}
+\beamer@sectionintoc {3}{세계 여러 언어의 형태론적 유형}{28}{0}{3}
+\beamer@sectionintoc {4}{파생어의 구조}{33}{0}{4}
+\beamer@sectionintoc {5}{분포 분석의 실제}{34}{0}{5}

@@ -1,0 +1,832 @@
+\documentclass[11pt, aspectratio=169]{beamer}
+
+% --- Core Packages for Modern Documents ---
+\usepackage{fontspec}      
+\usepackage{unicode-math}
+% \usepackage{xeCJK}         
+% \usepackage{tipa}
+\usepackage{graphicx}      
+\usepackage{minted}
+\usepackage{setspace}
+\usepackage{kotex}
+\usepackage{tikz}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage{emoji}
+
+\usetikzlibrary{
+    shapes.geometric, % 다양한 도형 사용
+    arrows.meta,      % 화살표 스타일 설정
+    positioning       % 노드 위치 선정
+}
+
+% \xeCJKsetup{CJKspace=true}
+
+% --- Font Setup ---
+\setsansfont{Noto Sans KR} %Noto Sans KR
+\setmainfont{Noto Serif KR}
+\setmonofont{D2Coding}
+
+\setmainhangulfont{Noto Sans KR}
+\setsanshangulfont{Noto Serif KR}
+\setmonohangulfont{D2Coding}
+
+% \setCJKsansfont{Noto Sans KR}  %나눔바른고딕 옛한글
+% \setCJKmainfont{Noto Serif KR}
+% \setCJKmonofont{D2Coding}
+
+\setmathfont{Latin Modern Math}
+
+\newfontfamily{\tnrfont}{Times New Roman}
+\newcommand{\texttnr}[1]{{\tnrfont #1}}
+\newfontfamily{\ipafont}{Doulos SIL}
+\newcommand{\textds}[1]{{\ipafont #1}}
+\newfontfamily{\chinesefont}{Noto Sans SC}
+\newcommand{\textzh}[1]{{\chinesefont #1}}
+
+\mode<presentation>
+{
+  \usetheme{default}      % or try Darmstadt, Madrid, Warsaw, Marburg...
+  \usecolortheme{dove} % or try albatross, beaver, crane, dove...
+  \usefonttheme{default}  % or try serif, structurebold, ...
+  \setbeamertemplate{navigation symbols}{}
+  \setbeamertemplate{caption}[numbered]
+} 
+
+\AtBeginSection[]{
+  \begin{frame}
+    \vfill % Vertically center the title
+    \centering
+      \usebeamerfont{title}\insertsectionhead\par
+    \vfill
+  \end{frame}
+}
+
+\renewcommand{\arraystretch}{1.3} % Set row height for ALL tables in the document to 1.5x
+
+\definecolor{Highlight}{HTML}{FFF2CC} % A soft yellow
+
+\definecolor{MonokaiBackground}{HTML}{272822}
+\definecolor{blocktitle}{HTML}{7A8B5D}
+\definecolor{blockbody}{HTML}{F0E085}
+\definecolor{normaltext}{HTML}{E5E8D5}
+\definecolor{structure_color}{HTML}{D1E1E8}
+
+\setbeamercolor{normal text}{bg=normaltext, fg=black}
+\setbeamercolor{structure}{bg=structure_color, fg=black}
+
+\setbeamercolor{block title}{bg=blocktitle, fg=white}
+\setbeamercolor{block body}{bg=blockbody, fg=black}
+\setbeamertemplate{footline}{
+  \hfill % Pushes the content to the right
+  \usebeamercolor{page number in head/foot}
+  \usebeamerfont{page number in head/foot}
+  \insertframenumber{} / \inserttotalframenumber
+  \hspace*{2ex} % Adds a little padding from the right edge
+}
+
+\setminted{
+    style=default, % dracula, native, monokai...
+    linenos,       % Show line numbers
+    frame=lines,   % Draw a thin frame around the code
+    framesep=2mm,
+    xleftmargin=6pt,
+    breaklines=true
+}
+
+% 제목 정보
+\title{언어의 이해}
+\subtitle{4강. 언어의 단어 구조와 형태론}
+\author{김미경}
+\date{2025.9.24}
+
+\begin{document}
+
+% 제목 슬라이드
+\frame{\titlepage}
+
+% 목차
+\begin{frame}[t]{목차}
+\tableofcontents
+\end{frame}
+
+\section{단어와 단어의 구조}
+
+\begin{frame}[t]{언어 지식의 구조}
+    \begin{block}{언어 지식의 구성 요소}
+      \begin{itemize}
+        \item 어휘부: 언어를 구성하는 단위들에 대한 지식
+        \item 규칙: 언어를 구성하는 단위들이 결합하는 패턴에 대한 지식
+      \end{itemize}
+    \end{block}
+    \begin{columns}
+      \begin{column}[T]{0.47\textwidth}
+        \begin{block}{언어를 구성하는 단위들}
+          \begin{itemize}
+            \item 사과, 커피, 컵, 태희, ... \leftarrow 단어! 
+            \item 먹었다 \leftarrow 단어?
+            \item 먹-, -었-, -다 \leftarrow 단어...는 아닌 듯?
+            \item ㅁ,ㅓ,ㄱ, ㅓ, ㅅ, ㄷ, ㅏ \leftarrow 의미가 없어져 버림
+          \end{itemize}
+        \end{block}        
+      \end{column}
+      \begin{column}[T]{0.46\textwidth}
+        \begin{block}{형태소(morpheme)}
+          \begin{itemize}
+            \item 뜻을 가진, 더는 쪼갤 수 없는 최소한의 언어 단위
+            \item 사과, 커피, 컵, 태희, 먹-, -었-, -다 ... 
+          \end{itemize}
+        \end{block}        
+      \end{column}
+    \end{columns}
+    \begin{center}
+      \emoji{light-bulb} 의미 없는 소리가 의미를 지닌 형태소를 구성하고, 형태소가 단어를 구성하는 구조
+    \end{center}
+\end{frame}
+
+\begin{frame}[t]{단어형(word form) vs. 어휘소(lexeme)}
+  \begin{block}{단어 나누기}
+    태희는 커피를 마셨다
+    \begin{center}
+      \begin{tabular}{lll}
+        \hline
+        \textbf{개수} & \textbf{구성 단위} & \textbf{분절} \\
+        \hline
+        3개 & 한국어 ‘어절’ & 태희는, 커피를, 마셨다\\
+        5개 & 한국어 학교문법의 ‘단어’ & 태희, 는, 커피, 를, 마셨다\\
+        3개 & 화자의 직관에 따른 의미 단위 & 태희는, 커피를, 마셨다 \\
+        \hline
+      \end{tabular}    
+    \end{center}
+  \end{block}
+  \begin{columns}
+    \begin{column}[T]{0.46\textwidth}
+    문제
+      \begin{itemize}
+        \item 단어를 어떻게 정의해야 할까?
+        \item ‘커피’와 ‘커피를’은 같은 단어로 봐야 할까, 다른 단어로 봐야 할까?
+      \end{itemize}      
+    \end{column}
+    \begin{column}[T]{0.47\textwidth}
+    해결
+      \begin{itemize}
+        \item 단어 말고 다른 단위를 정의하자!
+      \end{itemize}      
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[t]{단어형(word form) vs. 어휘소(lexeme)}
+  \begin{block}{어휘소}
+    형식이 다르지만 화자들에게 ‘같다’고 인식되는 단어들을 하나로 추상화한 것
+  \end{block}
+  \begin{block}{단어형}
+    어휘소가 문장 내에서 실현된 모습
+  \end{block}
+  \begin{columns}
+    \begin{column}{0.6\textwidth}
+      \begin{tabular}{ll}
+        \hline
+        \textbf{어휘소} & \textbf{단어형} \\
+        \hline
+        커피 & 커피, 커피가, 커피를, 커피와... \\
+        먹다 & 먹다, 먹었다, 먹고, 먹으며, 먹으니 ... \\
+        THEY & they, them, their \\
+        WALK & walk, walks, walking, walked \\
+        \hline
+      \end{tabular}      
+    \end{column}
+    \begin{column}{0.33\textwidth}
+      \emoji{light-bulb} \\ ‘커피가’와 ‘커피를’은 같은 어휘소의 서로 다른 단어형! \\
+    \end{column}
+  \end{columns}
+  \begin{center}
+    {\small 주의: 단어가 무엇인지는 정의하지 않은 채로 둠}     
+  \end{center}
+\end{frame}
+
+\begin{frame}[t]{단어의 변형}
+  \begin{block}{단어의 변형}
+    \begin{itemize}
+      \item 단어에 뭔가를 더해서 다른 단어로 만드는 일
+      \item 더해지는 요소는 기본이 되는 요소와 대등한 것으로 여겨지지 않음
+      \item 어근(root): 기본이 되는 요소
+      \item 접사(affix): 더해지는 요소
+      \item 어간(stem): 접사가 결합하는 대상
+    \end{itemize}
+  \end{block}
+  \begin{itemize}
+    \item 먹-었-다
+  \end{itemize}
+  \begin{columns}
+    \begin{column}[T]{0.46\textwidth}
+      \begin{block}{다른 단어, 같은 어휘: 굴절(inflection)}
+        덮다, 덮었다, 덮고, 덮으니... 
+      \end{block}      
+    \end{column}
+    \begin{column}[T]{0.47\textwidth}
+      \begin{block}{다른 단어, 다른 어휘: 파생(derivation)}
+        덮개
+      \end{block}      
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[t]{다른 어휘를 만드는 변형: 파생(derivation)}
+  \begin{center}
+    \begin{tabular}{lccl}
+      \hline
+      & \textbf{단어형} & \textbf{어휘소} & 차이점 \\
+      \hline
+      먹다 vs. 먹기 & 다름 & 다름 & 종류가 다름 \\
+      먹다 vs. 퍼먹다 & 다름 & 다름 & 의미가 다름 \\      
+      \hline
+    \end{tabular}
+  \end{center}
+  \begin{block}{어휘의 종류}
+    \begin{itemize}
+      \item 어휘들이 속해 있는 문법적 부류
+      \item 명사, 동사, 형용사, 부사, ... 
+      \item 개별 언어의 문법에 따라 어휘의 종류 목록이 달라짐
+    \end{itemize}
+  \end{block}
+  \begin{block}{어휘를 바꾸는 변형}
+    의미가 달라지거나 종류가 달라지면 다른 어휘가 됨
+  \end{block}
+\end{frame}
+
+\begin{frame}[t]{같은 어휘 내에서의 변형: 굴절(inflection)}
+  \begin{center}
+    \begin{tabular}{lccl}
+      \hline
+      & \textbf{단어형} & \textbf{어휘소} & 차이점 \\
+      \hline
+      먹다 vs. 먹었다 & 다름 & 같음 & 문법적 정보가 다름 \\
+      먹다 vs. 먹고 & 다름 & 같음 & 문법적 역할이 다름 \\      
+      \hline
+    \end{tabular}
+  \end{center}
+  \begin{block}{문법적 정보: 어휘의 종류에 따라 표시될 수 있는 추가적인 정보들}
+    \begin{itemize}
+      \item 명사: 수(number), 격(case), 성(gender) \dots
+      \item 동사: 수(number), 인칭(person), 시제(tense), 법(mood) \dots
+    \end{itemize}
+  \end{block}
+  \begin{block}{문법적 역할: 어휘가 문장 내에서 수행하는 역할}
+    \begin{itemize}
+      \item 명사: 태희는 \textbf{커피를} 마셨다 vs. \textbf{커피가} 나왔다
+      \item 동사: 태희는 케이크를 \textbf{먹고} 커피를 마셨다 vs. 태희는 커피를 마시고 케이크를 \textbf{먹었다}.
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}[t]{굴절과 파생}
+  \begin{block}{굴절}
+    \begin{itemize}
+      \item 굴절에 의한 변형은 어휘의 종류를 바꾸지 않음
+      \item 굴절에 의해 변형된 단어는 새로운 어휘로 판단되지 않음
+      \item 굴절은 언제 일어날지 대부분 예측이 가능함 (먹었다, 그렸다, 달렸다...)
+    \end{itemize}
+  \end{block}
+  \begin{block}{파생}
+    \begin{itemize}
+      \item 파생에 의한 변형은 어휘의 종류를 바꿀 수 있음
+      \item 파생에 의해 변형된 단어는 새로운 어휘로 판단됨
+      \item 파생은 일어날지 여부를 예측하기 어려움(구경꾼(O), 요리꾼(X))
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}[t]{패러다임}
+  \begin{block}{패러다임}
+    \begin{itemize}
+      \item 관련이 있는 단어들의 집합
+      \item 별다른 설명이 없으면 보통 굴절된 단어들의 집합을 가리킴
+    \end{itemize}
+  \end{block}
+  ‘먹다’의 파생 패러다임
+  \begin{itemize}
+    \item 먹다, 쳐먹다, 먹이, 먹성, 먹보, 먹히다, 먹이다... 
+  \end{itemize}
+  ‘먹다’의 (굴절) 패러다임
+  \begin{itemize}
+    \item 먹다, 먹냐, 먹었다, 먹었냐, 먹으며, 먹고, 먹자, 먹어라, 먹으마... 
+  \end{itemize}
+  ‘맨-’의 파생 패러다임
+  \begin{itemize}
+    \item 맨손, 맨발, 맨눈, 맨몸, 맨머리, 맨대가리, 맨정신, 맨입
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[t]{형태소의 종류}
+\begin{columns}
+\begin{column}[T]{0.47\textwidth}
+    \begin{block}{자립성 기준}
+        \begin{itemize}
+            \item \textbf{자립 형태소}: 혼자 단어가 될 수 있음
+            \item \textbf{의존 형태소}: 다른 단어에 결합해야 단어가 될 수 있음
+        \end{itemize}
+    \end{block}
+\end{column}
+\begin{column}[T]{0.46\textwidth}
+    \begin{block}{의미 기준}
+        \begin{itemize}
+            \item \textbf{내용 형태소}: 실질적, 구체적 의미
+            \item \textbf{기능 형태소}: 문법적 관계 표시
+        \end{itemize}
+    \end{block}
+\end{column}
+\end{columns}
+
+\begin{block}{두 기준의 조합}
+  \begin{center}
+    \begin{tabular}{l|l|l}
+        \hline
+         & \textbf{내용 형태소} & \textbf{기능 형태소} \\
+        \hline
+        \textbf{자립 형태소} & 하늘, 바다, 책... & 나, 그, 이...\\
+        \hline
+        \textbf{의존 형태소} & 먹-, 읽- ... & -었-, -다, -이/가 ...\\
+         & 새-, 풋- ... & \\
+        \hline
+    \end{tabular}    
+  \end{center}
+\end{block}
+
+\end{frame}
+
+\begin{frame}[t]{이형태(allomorphy)}
+  \begin{block}{이형태}
+    \begin{itemize}
+      \item 같은 의미, 같은 문법적 분류를 지니는 형태소가 환경에 따라 다른 형식을 갖는 경우에, 그 형식들을 가리키는 용어. 
+      \item \{ \}로 감싸서 표시
+    \end{itemize}
+  \end{block}
+  \begin{itemize}
+    \item 음소와 변이음의 관계 = 형태소와 이형태의 관계
+    \item 형태소 = 이형태의 집합
+    \item 이형태들은 서로 상보적 분포를 가짐
+    \item 이형태들은 모두 같은 형태소로 인지됨
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[t]{이형태(allomorphy)}
+  \begin{block}{음운론적 이형태(phonologically conditioned allomorphy)}
+    이형태의 출현 조건이 음운론적으로 결정되는 경우
+  \end{block}
+  한국어의 주격조사: \{-이, -가\}
+  \begin{itemize}
+    \item \{-가\}: 결합하는 명사의 끝소리가 모음인 경우 출현. ‘김태희가 결석이다’
+    \item \{-이\}: 결합하는 명사의 끝소리가 자음인 경우 출현. ‘이태민이 출석이다’
+  \end{itemize}
+  한국어의 연결어미: \{-아, -어\}
+  \begin{itemize}
+    \item \{-아\}: 결합하는 용언의 끝음절 모음이 ‘ㅏ,ㅗ’인 경우 출현. ‘잡아’ 
+    \item \{-어\}: 결합하는 용언의 끝음절 모음이 ‘ㅏ,ㅗ’ 이외인 경우 출현. ‘먹어’
+  \end{itemize}
+  영어의 복수 표시 접미사: \{\textds{-s, -z, -ɪz}\}
+  \begin{itemize}
+    \item \{\textds{-s}\}: 결합하는 명사의 끝소리가 무성음인 경우 출현. ‘cats’
+    \item \{\textds{-z}\}: 결합하는 명사의 끝소리가 유성음인 경우 출현. ‘dogs’
+    \item \{\textds{-ɪz}\}: 결합하는 명사의 끝소리가 /\textds{s, z, ʃ, tʃ}/인 경우 출현. ‘boxes, matches’
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[t]{이형태(allomorphy)}
+  \begin{block}{형태론적 이형태(morphologically conditioned allomorphy)}
+    음운론적 조건 이외의 조건으로 이형태의 출현이 결정되는 경우
+  \end{block}
+  특정 접사와의 결합
+  \begin{itemize}
+    \item 영어 produce \textds{[pɹədus]} vs. productive \textds{[prədʌktɪv]}: ‘-ive’ 접사와 결합할 때 \textds{[prədʌkt]}형 출현
+  \end{itemize}
+  특정한 어휘와의 결합
+  \begin{itemize}
+    \item 영어 복수접미사의 이형태 \{-en\}: ‘ox’와 결합할 때 ‘-en’ 형 출현
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[t]{이형태(allomorphy)}
+  \begin{block}{보충법(suppletion)}
+    형태론적 이형태들 중 일부가 다른 이형태와 형식상의 차이가 큰 현상
+  \end{block}
+  \begin{columns}
+    \begin{column}[T]{0.46\textwidth}
+      약한 보충법 사례: 영어의 일부 동사의 과거형1
+      \begin{itemize}
+        \item bring \textds{[bɹɪŋ]} vs. brought \textds{[bɹɔt]}
+        \item teach \textds{[titʃ]} vs. taught \textds{[tɔt]}
+        \item seek \textds{[sik]} vs. sought \textds{[sɔt]}
+      \end{itemize}
+      강한 보충법 사례: 영어 일부 동사의 과거형2
+      \begin{itemize}
+        \item is \textds{[ɪz]} vs. was \textds{[wʌz]} 
+        \item go \textds{[goʊ]} vs. went \textds{[wɛnt]}
+      \end{itemize}
+    \end{column}
+    \begin{column}[T]{0.47\textwidth}
+      강한 보충법 사례: 세르보크로아트어 \texttnr{č}ovjek ‘person’ 단수 vs. 복수
+      \begin{itemize}
+        \item 주격(-이) \texttnr{č}ovjek vs. ljud-i
+        \item 대격(-을) \texttnr{č}ovjek-a vs. ljud-e
+        \item 속격(-의) \texttnr{č}ovjek-a vs. ljud-ī
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\section{형태론적 과정}
+
+\begin{frame}[t]{새로운 단어 만들기}
+  \begin{itemize}
+    \item 어간에 접사 결합하기 \leftarrow 앞서 본 방법
+    \item 이외에도 다양한 방법으로 새로운 단어를 만들 수 있음 
+  \end{itemize}
+
+  \begin{block}{새로운 단어를 만드는 주된 방법: 더하기}
+  \begin{itemize}
+    \item 접사 결합 (un- + happy \rightarrow unhappy)
+    \item 합성 (black + board \rightarrow blackboard)
+    \item 중첩 (반짝 \rightarrow 반짝반짝)
+  \end{itemize}
+  \end{block}
+  \begin{block}{새로운 단어를 만드는 주된 방법: 바꾸기}
+    \begin{itemize}
+      \item 교체 (man \rightarrow men)
+      \item 형판 형태론 (\textbf{k}i\textbf{t}a\textbf{b} ‘책’, \textbf{k}a\textbf{tb} ’쓰기’)
+      \item 초분절 형태론 (\texttnr{présent} ‘선물’ \rightarrow \texttnr{presént} ‘선물하다’)
+      \item 형태론적 전위 (\textds{/qqit/} ‘억제하다’ \rightarrow \textds{[qiqt]} ‘억제하고 있다’)
+    \end{itemize}
+  \end{block}
+
+\end{frame}
+
+\begin{frame}[t]{접사 결합(affixation)}
+  \begin{block}{정의}
+    접사를 결합시켜 새로운 단어를 만드는 일
+  \end{block}
+  \begin{columns}
+    \begin{column}[T]{0.3\textwidth}
+      \begin{block}{접두사: 어근 앞}
+        \begin{itemize}
+          \item 영어 in- + complete \rightarrow incomplete
+          \item 한국어 풋- + 사과 \rightarrow 풋사과
+        \end{itemize}
+      \end{block}
+    \end{column}
+    \begin{column}[T]{0.3\textwidth}
+      \begin{block}{접요사: 어근 안}
+        타갈로그어 접요사 ‘um-’
+        \begin{itemize}
+          \item lakad ‘walk’ vs. lumakad ‘to walk’
+          \item bili ‘buy’ vs. bumili ‘to buy’
+          % \item kuha ‘take, get’ vs. kumuha ‘to take, to get’
+        \end{itemize}
+      \end{block}
+    \end{column}
+    \begin{column}[T]{0.3\textwidth}
+      \begin{block}{접미사: 어근 뒤}
+        \begin{itemize}
+          \item 영어 govern + -ment \rightarrow government
+          \item 한국어 덮- + 개 \rightarrow 덮개
+        \end{itemize}
+      \end{block}
+    \end{column}
+  \end{columns}
+  
+\end{frame}
+
+\begin{frame}[t]{접사 결합(affixation)}
+  \begin{block}{접사의 생산성}
+    \begin{itemize}
+      \item 접사가 새로운 단어형을 만들어내는 능력
+    \end{itemize}
+  \end{block}
+  \begin{columns}
+    \begin{column}[T]{0.46\textwidth}
+      \begin{block}{어휘적 생산성}
+        파생접사가 새로운 어휘소를 만드는 능력
+      \end{block}
+      한국어 ‘-자’: 새로운 단어를 만들어냄
+      \begin{itemize}
+        \item 가담자, 감독자, 금리생활자 \dots 
+        \item 수포자, 생일자(new!)
+      \end{itemize}
+      한국어 ‘-개’: 새로운 단어를 만들지 않음
+      \begin{itemize}
+        \item 가리개, 날개, 덮개, 지우개, 뿌리개, 따개 \dots 
+        \item []
+      \end{itemize}
+    \end{column}
+    \begin{column}[T]{0.47\textwidth}
+      \begin{block}{문법적 생산성}
+        굴절접사가 단어형을 만드는 능력
+      \end{block}
+      영어 ‘-s’: 새로운 단어에도 결합함
+      \begin{itemize}
+        \item wug \rightarrow wugs
+      \end{itemize}
+      영어 ‘-en’: 결합하는 단어가 더 줄어듦
+      \begin{itemize}
+        \item brother \rightarrow brothers \\ (cf. brethren)
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[t]{합성(compounding)}
+  \begin{block}{정의}
+    서로 다른 어근을 결합시켜 새로운 단어를 만드는 일
+  \end{block}
+  \begin{block}{종류}
+    \begin{itemize}
+      \item 자립형태소의 결합 girlfriend, blackbird, textbook
+      \item 파생어의 결합 air-conditioner, ironing board, watch-maker
+      \item 합성어의 결합 lifeguard chair, aircraft carrier, life-insurance salesman
+    \end{itemize}
+  \end{block}
+  * 합성될 수 있는 단어의 개수에는 제한이 없음
+  \begin{itemize}
+    \item 영어 income tax preparation fees
+    \item 영어 mint chocolate chip ice cream waffle cone
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[t]{합성(compounding)}
+  \begin{block}{합성어와 구(phrase)의 비교}
+    \begin{itemize}
+      \item 단어의 선형 나열이라는 점에서는 구분되지 않음
+      \item 의미 차이 또는 형식적인 차이를 통해 구분 가능
+      \item 구와 달리 합성어는 사이에 다른 요소를 끼워넣을 수 없음
+    \end{itemize}
+  \end{block}
+  \begin{columns}
+    \begin{column}{0.46\textwidth}
+      \begin{block}{영어의 강세 패턴}
+      \begin{itemize}
+        \item \texttnr{bláckbird, mákeup} \leftarrow 합성어
+        \item \texttnr{bláck bírd, máke úp} \leftarrow 구 
+      \end{itemize}        
+      \end{block}
+    \end{column}
+    \begin{column}{0.47\textwidth}
+      \begin{block}{한국어 ‘빨간약’}
+      \begin{itemize}
+        \item 포비돈요오드액 \leftarrow 합성어 ‘빨간약’
+        \item 색깔이 빨간색인 약 \leftarrow 구 ‘빨간 약’
+      \end{itemize}
+      \end{block}      
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[t]{중첩(reduplication)}
+  \begin{block}{정의}
+    어근의 전부 또는 일부를 반복하여 새로운 단어를 만드는 일
+  \end{block}
+  \begin{columns}
+    \begin{column}[T]{0.46\textwidth}
+      \begin{block}{완전중첩(total reduplication)}
+        한국어의 의성/의태어 형성
+        \begin{itemize}
+          \item 반짝반짝, 말랑말랑 \dots
+          \item 으르렁으르렁
+        \end{itemize}
+        인도네시아어의 복수형 형성
+        \begin{itemize}
+          \item rumah ‘house’ vs. rumahrumah ‘houses’
+          \item ibu ‘mother’ vs. ibuibu ‘mothers’
+          % \item lalat ‘fly’ vs. lalatlalat ‘flies’
+        \end{itemize}
+      \end{block}      
+    \end{column}
+    \begin{column}[T]{0.47\textwidth}
+      \begin{block}{부분중첩(partial reduplication)}
+        한국어의 의성/의태어 형성
+        \begin{itemize}
+          \item 우수수 vs. 우수수수수
+          \item 촤르르륵/촤라라락, 타다당 \dots
+        \end{itemize}
+        타갈로그어의 미래형 형성
+        \begin{itemize}
+          \item bili ‘buy’ vs. bibili ‘will buy’
+          \item kain ‘eat’ vs. kakain ‘will eat’
+          % \item pasok ‘enter’ vs. papasok ‘will enter’
+        \end{itemize}
+      \end{block}     
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[t]{교체(alternation)}
+  \begin{block}{정의}
+    형태소에 뭔가가 더해지는 대신, 형태소 고유의 형식이 변형되는 일
+  \end{block}
+  \begin{columns}
+    \begin{column}[T]{0.46\textwidth}
+      \begin{block}{굴절형을 형성하는 교체}
+      \begin{itemize}
+        \item 영어 man vs. men \\ \textds{[æ] vs. [ɛ]}
+        \item 영어 goose vs. geese \\ \textds{[u] vs. [i]}
+        \item 영어 ring / rang / rung \\ \textds{[ɪ] / [æ] / [ʌ]}
+        \item 영어 drink / drank / drunk \\ \textds{[ɪ] / [æ] / [ʌ]}
+      \end{itemize}
+        
+      \end{block}
+    \end{column}
+    \begin{column}[T]{0.47\textwidth}
+      \begin{block}{파생형을 형성하는 교체}
+      \begin{itemize}
+        \item 영어	use (명사) vs. use (동사) \\ \textds{[s] vs. [z]}
+        \item 영어	proof (명사) vs. prove (동사) \\ \textds{[f] vs. [v]}
+        \item 히브리어 \textds{[limed]} ‘he taught’ vs. \textds{[limud]} ‘lesson’
+        \item 히브리어 \textds{[tijel]} ‘he traveled’ vs. \textds{[tijul]} ‘trip’
+      \end{itemize}        
+      \end{block}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[t]{형판 형태론(templatic morphology)}
+  \begin{block}{정의}
+    \begin{itemize}
+      \item 자음만으로 구성된 어근에 모음이 결합하여 단어를 만드는 일
+      \item 어떤 모음이 결합하느냐에 따라 어떤 단어가 될지 예측할 수 있음
+    \end{itemize}
+  \end{block}
+  \begin{block}{아랍어 동사의 굴절형 }
+  \begin{columns}
+    \begin{column}{0.3\textwidth}
+      어근 k-t-b ‘write’
+      \begin{itemize}
+        \item \textds{[kataba]} ‘he wrote’
+        \item \textds{[yaktubu]} ‘he is writing’
+        \item \textds{[maktuːb]} ‘written’
+        \item \textds{[katb]} ‘writing (noun)’
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.3\textwidth}
+      어근 k-s-r ‘break’
+      \begin{itemize}
+        \item \textds{[kasara]} ‘he broke’
+        \item \textds{[yaksuru]} ‘he is breaking’
+        \item \textds{[maksuːr]} ‘broken’
+        \item \textds{[kasr]} ‘breaking (noun)’
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.3\textwidth}
+      어근 f-q-d ‘lose’
+      \begin{itemize}
+        \item \textds{[faqada]} ‘he lost’
+        \item \textds{[yafqidu]} ‘he is losing’
+        \item \textds{[mafquːd]} ‘lost’
+        \item \textds{[faqd]} ‘losing (noun)’
+      \end{itemize}
+    \end{column}
+  \end{columns}    
+  \end{block}
+
+\end{frame}
+
+\begin{frame}[t]{초분절 형태론(suprasegmental morphology)}
+  \begin{block}{정의}
+    단어를 변형하기 위해 초분절음을 사용하는 일
+  \end{block}
+  \begin{columns}
+    \begin{column}[T]{0.46\textwidth}
+      \begin{block}{성조를 사용하는 경우}
+        Tlatepuzco Chinantec ‘cut’ 동사의 완결상 활용형 – 인칭별
+        \begin{itemize}
+          \item 1인칭 단수: \textds{[tiu\textsuperscript{1}]} 
+          \item 1인칭 복수: \textds{[tiu\textsuperscript{3}]}
+          \item 2인칭: \textds{[tiu\textsuperscript{32}]}
+          \item 3인칭: \textds{[tiu\textsuperscript{1}]}
+        \end{itemize}
+      \end{block}      
+    \end{column}
+    \begin{column}[T]{0.47\textwidth}
+      \begin{block}{액센트를 사용하는 경우}
+        영어 명사-동사 파생
+        \begin{itemize}
+          \item extract \textds{[\underline{ɛk}stɹækt]} vs. \textds{[ɛk\underline{stɹækt}]}
+          \item increase \textds{[\underline{ɪn}kɹis]} vs. \textds{[ɪn\underline{kɹis}]}
+          \item permit \textds{[\underline{pɹ̣}mɪt]} vs. \textds{[pɹ̣\underline{mɪt}]}
+          \item record \textds{[\underline{ɹɛ}kɹ̣d]} vs. \textds{[ɹɪ\underline{kɔɹd}]}
+          \item produce \textds{[\underline{pɹoʊ}dus]} vs. \textds{[pɹə\underline{dus}]}
+        \end{itemize}
+      \end{block}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[t]{형태론적 전위(morphological metathesis)}
+  \begin{block}{정의}
+    \begin{itemize}
+      \item 전위(metathesis): 두 소리의 순서가 바뀌는 일
+      \item 형태론적 전위: 두 소리의 순서가 바뀜으로서 다른 단어가 만들어지는 일
+    \end{itemize}
+  \end{block}
+  \begin{block}{Straits Saanich어 동사의 활용형}
+    \begin{itemize}
+      \item \textds{/tʃkʷut/} ‘shoot’  \textds{[tʃukʷt]} ‘is shooting’
+      \item \textds{/xtʃit/} ‘scratch’ \textds{[xitʃt]} ‘is scratching’
+      \item \textds{/qqit/} ‘restrain’  \textds{[qiqt]} ‘is restraining’
+      \item \textds{/ttʃet/} ‘shatter’  \textds{[tetʃt]} ‘is shattering’
+    \end{itemize}
+    
+  \end{block}
+  
+\end{frame}
+
+\section{세계 여러 언어의 형태론적 유형}
+
+\begin{frame}[t]{분석적 언어 vs. 종합적 언어}
+  \begin{block}{분류 기준}
+    단어를 변형하는 형태론적 과정을 얼마나 다양하게, 빈번하게 사용하는가?
+  \end{block}
+  \begin{block}{분석적 언어(analytic language)}
+    \begin{itemize}
+      \item 단어가 단일형태소로 구성되는 경향
+      \item 특히 접사를 잘 사용하지 않음
+      \item 타 언어에서 접사 결합에 의해 표현되는 개념들을 단어 연쇄로 표현하는 경향
+    \end{itemize}
+  \end{block}
+  \begin{columns}
+    \begin{column}{0.46\textwidth}
+      중국어 ‘I play the piano’ \\
+      \begin{tabular}{ccc}
+        \textds{[wɔ} &	\textds{tʰan} & \textds{kaŋtɕʰin]} \\
+        I & play & piano \\
+      \end{tabular}      
+    \end{column}
+    \begin{column}{0.47\textwidth}
+      중국어 ‘We played the piano’ \\
+      \begin{tabular}{ccccc}
+        \textds{[wɔ} &	\textds{mən} &	\textds{tʰan} & \textds{kaŋtɕʰin} & \textds{lə]} \\
+        I	& plural	& play	& piano	& past \\
+      \end{tabular}            
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[t]{분석적 언어 vs. 종합적 언어}
+  \begin{block}{종합적 언어}
+    \begin{itemize}
+      \item 의존형태소가 다른 형태소에 결합하여 단어를 이루는 경향
+      \item 파생형/굴절형이 적극적으로 사용됨
+    \end{itemize}
+  \end{block}
+  종합적 언어의 하위 유형
+  \begin{itemize}
+    \item 교착(agglutinating)
+    \item 융합(fusional)
+    \item 다종합(polysynthetic)
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[t]{분석적 언어 vs. 종합적 언어}
+  \begin{block}{종합적 - 교착(agglutinating) 유형}
+    \begin{itemize}
+      \item 한 단어 내에 결합하는 형태소들의 경계가 상대적으로 분명한 경우
+      \item 단어를 이루는 각각의 형태소가 각각 의미 하나를 가지는 편
+    \end{itemize}
+  \end{block}
+  헝가리어 
+  \begin{itemize}
+    \item \textds{[haːz-unk-bɔn]} house-our-in ‘in our house’
+    \item \textds{[haːz-ɔd-bɔn]} house-your-in ‘in your house’
+    \item \textds{[haːz-unk]} house-our ‘our house’
+    \item \textds{[haːz-ɔd]} house-your ‘your house’
+  \end{itemize}  
+\end{frame}
+
+\begin{frame}[t]{분석적 언어 vs. 종합적 언어}
+  \begin{block}{종합적 – 융합(fusional) 유형}
+    \begin{itemize}
+      \item 한 단어 내에서 결합하는 형태소의 경계가 불분명한 경우
+      \item 어간 또는 접사에서 교체가 일어나는 경우가 많음
+      \item 접사가 복수의 의미를 표현하는 경우가 많음
+    \end{itemize}
+  \end{block}
+  스페인어
+  \begin{itemize}
+    \item \texttnr{hablo} \textds{[aβlo]} ‘I am speaking’		\textds{[-o]} 1인칭 단수 현재
+    \item \texttnr{habla} \textds{[aβla]} ‘s/he is speaking’	\textds{[-a]} 3인칭 단수 현재
+    \item \texttnr{hablé} \textds{[aβle]} ‘I spoke’		\textds{[-e]} 1인칭 단수 과거
+  \end{itemize}
+\end{frame}
+
+
+\section{파생어의 구조}
+
+\section{분포 분석의 실제}
+
+% \begin{frame}[t]{참고문헌}
+%   \begin{itemize}
+%     \item \texttnr{Department of Linguistics, The Ohio State University (2022) \textit{Language Files}, 13th ed. Ohio State University Press. Chapter 3.}
+%   \end{itemize}    
+% \end{frame}
+
+
+
+\end{document}

@@ -1,8 +1,8 @@
-This is LuaHBTeX, Version 1.22.0 (TeX Live 2025)  (format=lualatex 2025.8.10)  16 SEP 2025 13:32
+This is LuaHBTeX, Version 1.22.0 (TeX Live 2025)  (format=lualatex 2025.8.10)  24 SEP 2025 12:02
  system commands enabled.
  file:line:error style messages enabled.
-**/Users/sp/Documents/GitHub/LaTeX_works/2025-2_UL_Chp3/2025-2_UL_Chp3
-(/Users/sp/Documents/GitHub/LaTeX_works/2025-2_UL_Chp3/2025-2_UL_Chp3.tex
+**/Users/sp/Documents/GitHub/LaTeX_works/2025-2_UL_Chp4/2025-2_UL_Chp4
+(/Users/sp/Documents/GitHub/LaTeX_works/2025-2_UL_Chp4/2025-2_UL_Chp4.tex
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-07-20>
 Lua module: luaotfload 2024-12-03 v3.29 Lua based OpenType font support
@@ -1354,8 +1354,8 @@ Package fontspec Info:
 (fontspec)             - 'normal' (m/n) with NFSS spec.: <->"name:Noto Sans
 (fontspec)             SC:mode=node;script=latn;language=dflt;"
 
- (/usr/local/texlive/2025basic/texmf-dist/tex/latex/beamer/beamercolorthemedove.sty) (./2025-2_UL_Chp3.aux)
-\openout1 = 2025-2_UL_Chp3.aux
+ (/usr/local/texlive/2025basic/texmf-dist/tex/latex/beamer/beamercolorthemedove.sty) (./2025-2_UL_Chp4.aux)
+\openout1 = 2025-2_UL_Chp4.aux
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 103.
 LaTeX Font Info:    ... okay on input line 103.
@@ -1432,10 +1432,10 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 Package hyperref Info: Link coloring OFF on input line 103.
- (./2025-2_UL_Chp3.out) (./2025-2_UL_Chp3.out)
+ (./2025-2_UL_Chp4.out) (./2025-2_UL_Chp4.out)
 \@outlinefile=\write6
 
-\openout6 = 2025-2_UL_Chp3.out
+\openout6 = 2025-2_UL_Chp4.out
  (/usr/local/texlive/2025basic/texmf-dist/tex/latex/translator/translator-basic-dictionary-English.dict
 Dictionary: translator-basic-dictionary, Language: English 
 ) (/usr/local/texlive/2025basic/texmf-dist/tex/latex/translator/translator-bibliography-dictionary-English.dict
@@ -1461,11 +1461,11 @@ Package fontspec Info:
 (fontspec)             - 'normal' (m/n) with NFSS spec.: <->"name:Apple Color
 (fontspec)             Emoji:mode=harf;script=DFLT;language=dflt;"
 
- (./2025-2_UL_Chp3.nav)
+ (./2025-2_UL_Chp4.nav)
 
 [1
 
-{/usr/local/texlive/2025basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./2025-2_UL_Chp3.toc)
+{/usr/local/texlive/2025basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./2025-2_UL_Chp4.toc)
 
 [2
 
@@ -1474,20 +1474,10 @@ Package fontspec Info:
 [3
 
 ]
-Overfull \hbox (1.02316pt too wide) in paragraph at lines 140--140
-[][]  
- []
-
-
-Overfull \hbox (3.04366pt too wide) in paragraph at lines 140--140
-[][]  
- []
-
-
 
 [4
 
-]
+<./luatex.vEO7mq/1.png>]
 
 [5
 
@@ -1504,14 +1494,14 @@ Overfull \hbox (3.04366pt too wide) in paragraph at lines 140--140
 [8
 
 ]
-Overfull \vbox (0.73079pt too high) detected at line 238
+Overfull \vbox (2.21881pt too high) detected at line 281
  []
 
 
 
 [9
 
-<./luatex.GmF6Zx/1.png>]
+]
 
 [10
 
@@ -1544,6 +1534,10 @@ Overfull \vbox (0.73079pt too high) detected at line 238
 [17
 
 ]
+Overfull \vbox (5.17088pt too high) detected at line 462
+ []
+
+
 
 [18
 
@@ -1552,44 +1546,26 @@ Overfull \vbox (0.73079pt too high) detected at line 238
 [19
 
 ]
-
-[20
-
-]
-Overfull \hbox (21.95523pt too wide) in paragraph at lines 519--519
-[][]  
+Overfull \vbox (4.02075pt too high) detected at line 535
  []
 
 
 
+[20
+
+]
+
 [21
 
 ]
-<img/English-monophthongs.png, id=172, 501.875pt x 449.68pt>
-File: img/English-monophthongs.png Graphic file (type png)
-<use img/English-monophthongs.png>
-Package luatex.def Info: img/English-monophthongs.png  used on input line 535.
-(luatex.def)             Requested size: 183.23842pt x 164.18329pt.
-<img/English-diphthongs.png, id=173, 501.875pt x 471.7625pt>
-File: img/English-diphthongs.png Graphic file (type png)
-<use img/English-diphthongs.png>
-Package luatex.def Info: img/English-diphthongs.png  used on input line 535.
-(luatex.def)             Requested size: 187.21962pt x 175.98909pt.
-
 
 [22
 
-<./img/English-monophthongs.png><./img/English-diphthongs.png>]
-<img/Abkhaz_consonant_chart.png, id=181, 2670.97874pt x 713.66624pt>
-File: img/Abkhaz_consonant_chart.png Graphic file (type png)
-<use img/Abkhaz_consonant_chart.png>
-Package luatex.def Info: img/Abkhaz_consonant_chart.png  used on input line 542.
-(luatex.def)             Requested size: 398.3386pt x 106.4246pt.
-
+]
 
 [23
 
-<./img/Abkhaz_consonant_chart.png>]
+]
 
 [24
 
@@ -1634,126 +1610,39 @@ Package luatex.def Info: img/Abkhaz_consonant_chart.png  used on input line 542.
 [34
 
 ]
-
-[35
-
-]
-
-[36
-
-]
-
-[37
-
-]
-
-[38
-
-]
-
-[39
-
-]
-
-[40
-
-]
-
-[41
-
-]
-
-[42
-
-]
-
-[43
-
-]
-
-[44
-
-]
-
-[45
-
-]
-
-[46
-
-]
-<img/phonology-flowchart.png, id=309, 690.58pt x 822.07124pt>
-File: img/phonology-flowchart.png Graphic file (type png)
-<use img/phonology-flowchart.png>
-Package luatex.def Info: img/phonology-flowchart.png  used on input line 1010.
-(luatex.def)             Requested size: 168.4965pt x 200.57504pt.
-
-
-[47
-
-<./img/phonology-flowchart.png>]
-<img/exer9-Ukrainian-data.png, id=316, 759.83875pt x 354.32375pt>
-File: img/exer9-Ukrainian-data.png Graphic file (type png)
-<use img/exer9-Ukrainian-data.png>
-Package luatex.def Info: img/exer9-Ukrainian-data.png  used on input line 1015.
-(luatex.def)             Requested size: 398.3386pt x 185.75243pt.
-
-
-[48
-
-<./img/exer9-Ukrainian-data.png>]
-
-[49
-
-]
-
-LaTeX Font Warning: Font shape `TU/NotoSerifKR(0)/m/it' undefined
-(Font)              using `TU/NotoSerifKR(0)/m/n' instead on input line 1032.
-
-
-
-[50
-
-]
 \tf@nav=\write7
 
-\openout7 = 2025-2_UL_Chp3.nav
+\openout7 = 2025-2_UL_Chp4.nav
 \tf@toc=\write8
 
-\openout8 = 2025-2_UL_Chp3.toc
+\openout8 = 2025-2_UL_Chp4.toc
 \tf@snm=\write9
 
-\openout9 = 2025-2_UL_Chp3.snm
-runsystem(latexminted cleantemp  --timestamp 20250916133223 44E61E1A29FD1E26752D350EEC49F245)...executed.
- (./2025-2_UL_Chp3.aux)
+\openout9 = 2025-2_UL_Chp4.snm
+runsystem(latexminted cleantemp  --timestamp 20250924120209 AEA9DC8E7D0933458827768AAC5CD3DA)...executed.
+ (./2025-2_UL_Chp4.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-07-20>
  ***********
-
-
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
-Package rerunfilecheck Info: File `2025-2_UL_Chp3.out' has not changed.
-(rerunfilecheck)             Checksum: 62727F298EA01876A6EDDCFF0C0785DB;551.
+Package rerunfilecheck Info: File `2025-2_UL_Chp4.out' has not changed.
+(rerunfilecheck)             Checksum: 07BCE8140E133C440B9DE239D16A81CF;615.
 )
 
 Here is how much of LuaTeX's memory you used:
- 41420 strings out of 470118
+ 41211 strings out of 470118
  100000,1648299 words of node,token memory allocated
- 4589 words of node memory still in use:
-   31 hlist, 9 vlist, 5 rule, 10 disc, 4 local_par, 4 math, 95 glue, 10 kern, 32 penalty, 150 glyph, 592 attribute, 65 glue_spec, 229 attribute_list, 4 write, 3 user_defined, 26 pdf_colorstack nodes
-   avail lists: 2:3272,3:561,4:426,5:375,6:67,7:2458,8:2,9:595,10:37,11:26
- 68758 multiletter control sequences out of 65536+600000
- 142 fonts using 268200895 bytes
- 101i,14n,101p,526b,911s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</System/Library/Fonts/Supplemental/Times New Roman Italic.ttf></Users/sp/Library/Fonts/NotoSansKR-Bold.otf></Users/sp/Library/Fonts/NotoSerifKR-Bold.otf
-warning  (file /Users/sp/Library/Fonts/NotoSerifKR-Bold.otf) (cff): charset data possibly broken (too many glyphs)
-></System/Library/Fonts/Apple Color Emoji.ttc></System/Library/Fonts/Supplemental/Times New Roman.ttf></Users/sp/Library/Fonts/latinmodern-math.otf></Users/sp/Library/Fonts/DoulosSIL-Regular.ttf></Users/sp/Library/Fonts/NotoSerifKR-Regular.otf></Users/sp/Library/Fonts/NotoSansKR-Regular.otf>
-Output written on 2025-2_UL_Chp3.pdf (50 pages, 490972 bytes).
+ 1249 words of node memory still in use:
+   13 hlist, 6 vlist, 2 rule, 1 local_par, 23 glue, 4 kern, 12 penalty, 8 glyph, 112 attribute, 65 glue_spec, 54 attribute_list, 4 write, 3 user_defined, 1 pdf_start_link, 1 pdf_end_link, 1 pdf_action, 4 pdf_colorstack nodes
+   avail lists: 2:4354,3:634,4:412,5:246,6:72,7:2530,8:2,9:600,10:35,11:75
+ 68596 multiletter control sequences out of 65536+600000
+ 113 fonts using 248435419 bytes
+ 101i,11n,101p,526b,823s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</System/Library/Fonts/Supplemental/Times New Roman.ttf></Users/sp/Library/Fonts/DoulosSIL-Regular.ttf></Users/sp/Library/Fonts/NotoSansKR-Bold.otf></System/Library/Fonts/Apple Color Emoji.ttc></Users/sp/Library/Fonts/latinmodern-math.otf></Users/sp/Library/Fonts/NotoSerifKR-Regular.otf></Users/sp/Library/Fonts/NotoSansKR-Regular.otf>
+Output written on 2025-2_UL_Chp4.pdf (34 pages, 168534 bytes).
 
-PDF statistics: 398 PDF objects out of 1000 (max. 8388607)
- 298 compressed objects within 3 object streams
- 106 named destinations out of 1000 (max. 131072)
+PDF statistics: 285 PDF objects out of 1000 (max. 8388607)
+ 217 compressed objects within 3 object streams
+ 74 named destinations out of 1000 (max. 131072)
  56 words of extra memory for PDF output out of 10000 (max. 100000000)
 
